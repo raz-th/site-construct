@@ -31,7 +31,7 @@ const Card = ({ data, i }) => {
         )
     }
     return (
-        <Reveal width='75vw' delay={i * 100 + 50}>
+        <Reveal delay={i * 100 + 50}>
             <div className="recenzie-card">
                 <div className="rating">
                     <label />
