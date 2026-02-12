@@ -18,18 +18,23 @@ const Nav = () => {
     const [showMobileNav, setShowMobileNav] = useState(false)
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isVisible, setIsVisible] = useState(true);
+    const [scrollWidth, setScrollWidth] = useState(0);
 
     const controlNavbar = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > 50) {
-                setIsVisible(true); 
+                setIsVisible(true); // Keep visible
                 document.querySelector('header').classList.add('glass');
             } else {
                 document.querySelector('header').classList.remove('glass');
-                if (window.scrollY > lastScrollY) setIsVisible(false);
-                else setIsVisible(true);
             }
+            if (window.scrollY > lastScrollY) setIsVisible(false);
+            else setIsVisible(true);
             setLastScrollY(window.scrollY);
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            setScrollWidth(scrolled);
         }
     };
 
@@ -72,6 +77,9 @@ const Nav = () => {
                 <a className='a-tel' href={`tel:${phone}`}><FiPhone color='var(--accent-color)' /> {phone}</a>
                 <button className='btn-primary'>Solicită Ofertă</button>
             </nav>
+            <div className='scrollbar-container'>
+                <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
+            </div>
         </header>
     );
 }
