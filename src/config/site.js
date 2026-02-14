@@ -1,0 +1,10 @@
+export const numar_telefon = "+40 730 535 939";
+export const nume_complet = "AURVIS CONSTRUCT DESIGN";
+export const an_inceput = 2014;
+export const an_curent = new Date().getFullYear();
+export const logo192 = require("../assets/logo192.png");
+export const proiecte_finalizate = 40;
+export const clienti_multumiti = 20;
+export const adresa = ["Str. Valea Crangului 38", "Giurgiu"]
+export const program = ["Luni - Vineri: 08:00 - 18:00", "Sâmbătă: 09:00 - 14:00"]
+export const email = "contact@gmail.ro"

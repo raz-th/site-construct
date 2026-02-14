@@ -1,59 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Style/Proiecte.css"
 import { LuArrowUpRight } from "react-icons/lu";
 import { Reveal } from './Reveal';
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { MdClose } from 'react-icons/md';
 
+// require("../assets/poze_portofoliu/image (1).png")
 
-const ProjectCard = ({ image, category, title, location, size, delay }) => (
+const cat = ["FINALIZAT", "FINALIZAT", "INTERIOR", "EXTERIOR", "ȘANTIER", "ȘANTIER"]
+
+const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
-        <div className="project-card">
+        <div className="project-card" onClick={() => onClick()}>
             <div className="project-image-container">
-                <img src={image} alt={title} />
-                <span className="project-tag">{category}</span>
-            </div>
-            <div className="project-info">
-                <h3>{title}</h3>
-                <p>{location}  •  {size}</p>
+                <img src={require(`../assets/poze_portofoliu/image (${image_num}).png`)} alt={`Image ${image_num}`} />
+                <span className="project-tag">{cat[image_num - 1] || category}</span>
             </div>
         </div>
     </Reveal>
 );
 
-const Proiecte = () => {
-    const projects = [
-        {
-            image: require("../assets/dummy.png"),
-            category: "Casă",
-            title: "Exemplu Casă",
-            location: "București, Bragadiru",
-            size: "450 mp"
-        },
-        {
-            image: require("../assets/dummy.png"),
-            category: "Casă",
-            title: "Exemplu Casă Modernă",
-            location: "București, Pipera",
-            size: "320 mp"
-        },
-        {
-            image: require("../assets/dummy.png"),
-            category: "Casă",
-            title: "Exemplu Casă Clasică",
-            location: "București",
-            size: "520 mp"
-        }
-    ];
+const Proiecte = ({ setshowNav }) => {
+    const [selected_image, setSelected_image] = useState(null)
+    const projects = Array.from({ length: 6 }, (_, i) => i + 1);
+
+    useEffect(() => {
+        setshowNav(selected_image ? false : true)
+    }, [selected_image])
 
     return (
         <section className='proiecte' id='proiecte'>
+            {selected_image && (
+                <div className='proiecte-preview-image-container' onClick={() => setSelected_image(null)}>
+                    <button className='close-btn' onClick={() => setSelected_image(null)}>
+                        <MdClose />
+                    </button>
+                    <button
+                        className='next-btn left'
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setSelected_image((p) => (p > 1 ? p - 1 : 6));
+                        }}
+                    >
+                        <FaAngleLeft />
+                    </button>
+                    <span className="project-tag">{cat[selected_image - 1] || "da"}</span>
+                    <img
+                        src={require(`../assets/poze_portofoliu/image (${selected_image}).png`)}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+
+                    </img>
+
+                    <button
+                        className='next-btn right'
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setSelected_image((p) => (p < 6 ? p + 1 : 1));
+                        }}
+                    >
+                        <FaAngleRight />
+                    </button>
+                </div>
+            )}
             <div className='proiecte-content'>
                 <div className="proiecte-header">
                     <Reveal>
                         <div className="header-text">
                             <p className="subtitle">PORTOFOLIU</p>
-                            <h2>Proiecte care <span>Inspiră</span></h2>
+                            <h2>Lucrări <span>Realizate</span></h2>
                             <p className="description">
-                                Fiecare proiect este o poveste de succes. Descoperă o selecție din cele mai recente lucrări finalizate.
+                                O selecție din proiectele noastre recente – de la case moderne la vile premium și lucrări aflate în execuție.
                             </p>
                         </div>
                     </Reveal>
@@ -63,8 +80,8 @@ const Proiecte = () => {
                 </div>
 
                 <div className="proiecte-grid">
-                    {projects.map((project, index) => (
-                        <ProjectCard key={index} delay={index*120} {...project}/>
+                    {projects.map((v, index) => (
+                        <ProjectCard key={index} delay={index * 120} image_num={v} onClick={() => setSelected_image(v)} />
                     ))}
                 </div>
             </div>

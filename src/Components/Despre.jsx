@@ -2,6 +2,7 @@ import React from 'react';
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import "./Style/Despre.css";
 import { Reveal } from './Reveal';
+import { an_curent, an_inceput, nume_complet } from '../config/site';
 
 const Despre = () => {
     const features = [
@@ -20,10 +21,10 @@ const Despre = () => {
                 <div className='despre-content'>
                     <Reveal>
                         <p className='subtitle'>DESPRE NOI</p>
-                        <h2>De Ce Să Alegi <span>{"{nume}"}</span>?</h2>
+                        <h2>De Ce Să Alegi <span>{nume_complet.split(" ")[0]}</span>?</h2>
                         <p className='description'>
-                            Cu peste două decenii de experiență în industria construcțiilor, am livrat
-                            proiecte excepționale pentru sute de familii din România. Ne mândrim cu
+                            Cu peste un deceniu de experiență în industria construcțiilor, am livrat
+                            proiecte excepționale pentru familii din România. Ne mândrim cu
                             atenția la detalii și angajamentul nostru pentru calitate.
                         </p>
 
@@ -58,12 +59,12 @@ const Despre = () => {
                         <div className="bento-grid">
                             <div className="bento-column">
                                 <div className="bento-item experience">
-                                    <span className="big">20+</span>
+                                    <span className="big">{parseInt((an_curent - an_inceput)/10)}0+</span>
                                     <span className="muted">Ani de Experiență</span>
                                 </div>
 
                                 <div className="bento-item passion square">
-                                    <span className="year">Din 2004</span>
+                                    <span className="year">Din {an_inceput}</span>
                                     <span className="title">Construim cu Pasiune</span>
                                 </div>
                             </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FiPhone } from "react-icons/fi";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Style/Nav.css"
+import { numar_telefon, nume_complet } from '../config/site';
 
 const navigs = {
     "Acasă": "#acasa",
@@ -12,7 +13,6 @@ const navigs = {
     "Contact": "#contact"
 }
 
-const phone = "+40 712 345 678"
 
 const Nav = () => {
     const [showMobileNav, setShowMobileNav] = useState(false)
@@ -50,10 +50,11 @@ const Nav = () => {
         <header className={isVisible ? '' : 'nav-hidden'}>
             <div className='header-content'>
                 <div className='nav-section'>
-                    <div className='logo-nav'>logo</div>
+                    {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
                     <div>
-                        <h1>nume</h1>
-                        <p>CONSTRUCȚII PREMIUM</p>
+                        <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
+                        <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i)=>i>0?v+" ":'')}</p>
+                        
                     </div>
                 </div>
                 <nav className="nav-section">
@@ -62,7 +63,7 @@ const Nav = () => {
                     </ul>
                 </nav>
                 <div className="nav-section">
-                    <a className='a-tel' href={`tel:${phone}`}><FiPhone color='var(--accent-color)' /> {phone}</a>
+                    <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
                     <button className='btn-primary'>Solicită Ofertă</button>
                 </div>
                 <div className="nav-section">
@@ -74,10 +75,10 @@ const Nav = () => {
                 <ul>
                     {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={navigs[key]}>{key}</a></li> })}
                 </ul>
-                <a className='a-tel' href={`tel:${phone}`}><FiPhone color='var(--accent-color)' /> {phone}</a>
+                <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
                 <button className='btn-primary'>Solicită Ofertă</button>
             </nav>
-            <div className='scrollbar-container'>
+            <div className='scrollbar-container' style={{background: scrollWidth>0?"#1a1e24":"transparent"}}>
                 <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
             </div>
         </header>

@@ -2,8 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8rem 2rem 4rem; /* Adjusted for clarity */
-    background-color: var(--bg-color); /* The light beige background */
+    padding: 8rem 2rem 4rem;
+    /* Adjusted for clarity */
+    background-color: var(--bg-color);
+    /* The light beige background */
     text-align: center;
     min-height: 100vh;
 }
@@ -27,7 +29,7 @@
     max-width: 800px;
 }
 
-.servicii .t span{
+.servicii .t span {
     background-image: var(--gradient-gold);
     background-clip: text;
     -webkit-background-clip: text;
@@ -52,9 +54,9 @@
 }
 
 /* Card Styling */
-.card {
+.servicii .card {
     background-color: #fff;
-    padding: 2.5rem 2rem;
+
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: left;
@@ -62,19 +64,33 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    overflow: hidden;
 }
 
-.card:hover {
+.servicii .card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 2rem;
+}
+
+.servicii .card img{
+    aspect-ratio: 1/1;
+    /* object-fit: cover; */
+    object-position: 0 0;
+}
+
+.servicii .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover .card-icon {
+.servicii .card:hover .card-icon {
     transform: scale(1.1);
     /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); */
 }
 
-.card-icon {
+.servicii .card-icon {
     background: var(--gradient-gold);
     color: #fff;
     width: 50px;

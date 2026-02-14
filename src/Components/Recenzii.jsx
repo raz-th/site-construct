@@ -18,7 +18,7 @@ const Card = ({ data, i }) => {
                     <h3>„{descriere}”</h3>
                     {/* <p>{location}  •  {size}</p> */}
                 </div>
-                <div className='recenzie-profil'>
+                {/* <div className='recenzie-profil'>
                     <div className='recenzie-pfp' >
                         {nume[0]}
                     </div>
@@ -26,7 +26,7 @@ const Card = ({ data, i }) => {
                         <h3>{nume}</h3>
                         <p>{localitate}</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }
@@ -44,7 +44,7 @@ const Card = ({ data, i }) => {
                     <h3>„{descriere}”</h3>
                     {/* <p>{location}  •  {size}</p> */}
                 </div>
-                <div className='recenzie-profil'>
+                {/* <div className='recenzie-profil'>
                     <div className='recenzie-pfp' >
                         {nume[0]}
                     </div>
@@ -52,7 +52,7 @@ const Card = ({ data, i }) => {
                         <h3>{nume}</h3>
                         <p>{localitate}</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </Reveal>
     )
@@ -61,25 +61,25 @@ const Card = ({ data, i }) => {
 const lista_cu_recenzii = [
     {
         stele: 5,
-        descriere: "Cupidatat deserunt ex nisi enim aute veniam officia tempor eiusmod laboris elit ipsum nisi. Et ut nulla eu duis id. Tempor aute quis ea tempor eiusmod amet ad excepteur mollit labore sunt adipisicing. Amet culpa cupidatat commodo in id do consequat sunt ea.",
+        descriere: "Am colaborat pentru construcția casei la cheie și totul a decurs peste așteptări. Echipa serioasă, termene respectate și atenție la detalii. Recomand cu încredere.",
         nume: "Popescu Andrei",
         localitate: "Bucuresti"
     },
     {
         stele: 5,
-        descriere: "Cupidatat deserunt ex nisi enim aute veniam officia tempor eiusmod laboris elit ipsum nisi. Et ut nulla eu duis id. Tempor aute quis ea tempor eiusmod amet ad excepteur mollit labore sunt adipisicing. Amet culpa cupidatat commodo in id do consequat sunt ea.",
+        descriere: "Profesioniști de la proiectare până la finisaje. Comunicarea a fost foarte bună pe tot parcursul lucrării, iar rezultatul final arată exact cum ne-am dorit.",
         nume: "Ionescu Maria",
         localitate: "Bucuresti"
     },
     {
         stele: 5,
-        descriere: "Cupidatat deserunt ex nisi enim aute veniam officia tempor eiusmod laboris elit ipsum nisi. Et ut nulla eu duis id. Tempor aute quis ea tempor eiusmod amet ad excepteur mollit labore sunt adipisicing. Amet culpa cupidatat commodo in id do consequat sunt ea.",
+        descriere: "Am construit o vilă cu ei și experiența a fost una foarte bună. Au venit cu sugestii utile pe parcurs și au respectat bugetul stabilit inițial.",
         nume: "Dumitru Alexandru",
         localitate: "Bucuresti"
     },
     {
         stele: 5,
-        descriere: "Cupidatat deserunt ex nisi enim aute veniam officia tempor eiusmod laboris elit ipsum nisi. Et ut nulla eu duis id. Tempor aute quis ea tempor eiusmod amet ad excepteur mollit labore sunt adipisicing. Amet culpa cupidatat commodo in id do consequat sunt ea.",
+        descriere: "Seriozitate și transparență de la început până la final. Ne-au ținut la curent cu fiecare etapă și rezultatul final arată impecabil.",
         nume: "Marinescu David",
         localitate: "Bucuresti"
     }

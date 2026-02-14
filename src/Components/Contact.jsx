@@ -2,6 +2,15 @@ import React from 'react';
 import { IoLocationOutline, IoCallOutline, IoMailOutline, IoTimeOutline } from "react-icons/io5";
 import "./Style/Contact.css";
 import { Reveal } from './Reveal';
+import { adresa, email, numar_telefon, program } from '../config/site';
+
+
+const tipuri_casa = [
+    "Casă din lemn",
+    "Casă din cărămidă sau BCA (zidărie)",
+    "Casă pe structură metalică",
+    "Casă din beton"
+]
 
 const Contact = () => {
     return (
@@ -22,28 +31,37 @@ const Contact = () => {
                                 <div className='icon-box'><IoLocationOutline /></div>
                                 <div>
                                     <h4>Adresă</h4>
-                                    <p>Strada ceva<br />București, Sector 1</p>
+                                    <p>
+                                        {
+                                            adresa.map((v, i) => <span key={i}>{v}<br /></span>)
+                                        }
+                                    </p>
+                                    {/* <p>Strada ceva<br />București, Sector 1</p> */}
                                 </div>
                             </div>
                             <div className='info-item'>
                                 <div className='icon-box'><IoCallOutline /></div>
                                 <div>
                                     <h4>Telefon</h4>
-                                    <p>+40 700 000 000<br />+40 21 000 0000</p>
+                                    <p>{numar_telefon}</p>
                                 </div>
                             </div>
                             <div className='info-item'>
                                 <div className='icon-box'><IoMailOutline /></div>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>contact@gmail.ro</p>
+                                    <p>{email}</p>
                                 </div>
                             </div>
                             <div className='info-item'>
                                 <div className='icon-box'><IoTimeOutline /></div>
                                 <div>
                                     <h4>Program</h4>
-                                    <p>Luni - Vineri: 08:00 - 18:00<br />Sâmbătă: 09:00 - 14:00</p>
+                                    <p>
+                                        {
+                                            program.map((v, i) => <span key={i}>{v}<br /></span>)
+                                        }
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -73,14 +91,16 @@ const Contact = () => {
                                 <label>Tip Proiect</label>
                                 <select>
                                     <option>Selectează tipul proiectului</option>
-                                    <option>Casă Unifamilială</option>
-                                    <option>Vilă de Lux</option>
-                                    <option>Renovare</option>
+                                    {
+                                        tipuri_casa.map((v, i) =>
+                                            <option key={i}>{v}</option>
+                                        )
+                                    }
                                 </select>
                             </div>
                             <div className='form-group'>
                                 <label>Detalii Proiect</label>
-                                <textarea placeholder="Descrie pe scurt proiectul tău..."></textarea>
+                                <textarea placeholder="Descrie pe scurt proiectul tău..." style={{resize: 'vertical', maxHeight: 250}}></textarea>
                             </div>
                             <button type="submit" className='btn-submit'>Trimite Mesajul</button>
                         </form>

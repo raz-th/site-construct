@@ -12,7 +12,7 @@ export const Reveal = ({ children, width = "100%", delay = 0 }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     if (ref.current) observer.observe(ref.current);

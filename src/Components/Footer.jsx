@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import "./Style/Footer.css";
+import { an_inceput, logo192, nume_complet } from '../config/site';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -11,11 +12,11 @@ const Footer = () => {
                 {/* Coloana 1: Logo și Info */}
                 <div className="footer-brand">
                     <div className="footer-logo">
-                        <span className="logo-icon">l</span>
-                        <h3>nume</h3>
+                        <span className="logo-icon"><img width={35} src={logo192}/></span>
+                        <h4>{nume_complet}</h4>
                     </div>
                     <p className="brand-text">
-                        Construim case de vis cu pasiune și dedicare din 2004. 
+                        Construim case de vis cu pasiune și dedicare din {an_inceput}. 
                         Experiență, calitate și profesionalism la cele mai înalte standarde.
                     </p>
                     <div className="social-links">
@@ -41,10 +42,11 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Companie</h4>
                     <ul>
-                        <li><a href="#despre">Despre Noi</a></li>
+                        <li><a href="#despre_noi">Despre Noi</a></li>
                         <li><a href="#proiecte">Proiecte</a></li>
-                        <li><a href="#">Cariere</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#recenzii">Recenzii</a></li>
+                        {/* <li><a href="#">Cariere</a></li>
+                        <li><a href="#">Blog</a></li> */}
                     </ul>
                 </div>
 
@@ -61,7 +63,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <div className="bottom-content">
-                    <p>© {currentYear} nume. Toate drepturile rezervate.</p>
+                    <p>© {currentYear} {nume_complet}. Toate drepturile rezervate.</p>
                     <p>Construit cu pasiune în România 🇷🇴</p>
                 </div>
             </div>

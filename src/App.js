@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Contact from './Components/Contact';
 import Despre from './Components/Despre';
@@ -9,13 +10,14 @@ import Recenzii from './Components/Recenzii';
 import Servicii from './Components/Servicii';
 
 function App() {
+  const [showNav, setshowNav] = useState(true);
   return (
     <>
-      <Nav />
+      {showNav&&(<Nav />)}
       <main className="App">
         <Hero/>
         <Servicii/>
-        <Proiecte/>
+        <Proiecte setshowNav={setshowNav}/>
         <Recenzii/>
         <Despre/>
         <Contact/>
