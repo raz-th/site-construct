@@ -1,31 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import Contact from './Components/Contact';
-import Despre from './Components/Despre';
-import Footer from './Components/Footer';
-import Hero from './Components/Hero';
-import Nav from './Components/Nav';
-import Proiecte from './Components/Proiecte';
-import Recenzii from './Components/Recenzii';
-import Servicii from './Components/Servicii';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './Pages/Home_page';
+import GaleriePage from './Pages/Galerie_page';
+import ScrollToTop from './Components/ScrollToTop';
 
+const NoPage = () => {
+  return <h1>eroare 404</h1>
+}
 function App() {
-  const [showNav, setshowNav] = useState(true);
   return (
-    <>
-      {showNav&&(<Nav />)}
-      <main className="App">
-        <Hero/>
-        <Servicii/>
-        <Proiecte setshowNav={setshowNav}/>
-        <Recenzii/>
-        <Despre/>
-        <Contact/>
-        <Footer/>
-        {/* <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> */}
-      </main>
-    </>
-
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/galerie" element={<GaleriePage />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,45 @@
+.galerie_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: .3rem
+}
+
+.galerie_page .subtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.galerie_page h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #1a1e24;
+    margin-bottom: 1rem;
+}
+
+.galerie_page .description {
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.galerie-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@media (max-width: 600px) {
+    .galerie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

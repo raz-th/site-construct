@@ -1,0 +1,38 @@
+// src/sendEmail.js
+export const sendEmail = async (formData) => {
+  try {
+    const response = await fetch("/.netlify/functions/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        toEmail: "raz.taz032023@gmail.com",
+        toName: "noreply",
+        subject: "Test Email from Brevo API",
+        htmlContent: `
+          <html><body>
+          <h2>Solicitare Ofertă</h2>
+          <p><strong>Nume Complect:</strong> ${formData.name}</p>
+          <p><strong>Telefon:</strong> ${formData.phone}</p>
+          <p><strong>Email:</strong> ${formData.email}</p>
+          <p><strong>Tip Proiect:</strong> ${formData.projectType}</p>
+          <p><strong>Detalii Proiect:</strong> ${formData.details}</p>
+          <hr>
+          <p>Acest mesaj a fost trimis de pe formularul de pe site.</p>
+          </body></html>
+        `,
+      }),
+    });
+
+    const result = await response.json(); // now always JSON
+
+    if (!response.ok) {
+      console.error("Brevo error:", result);
+      throw new Error(result.message || "Failed to send email");
+    }
+
+    return result;
+  } catch (err) {
+    console.error("Error sending email:", err);
+    throw err;
+  }
+};

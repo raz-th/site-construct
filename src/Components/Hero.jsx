@@ -11,7 +11,7 @@ import { LuUsersRound } from 'react-icons/lu';
 const Hero = () => {
     return (
         <div className='hero' id='acasa'>
-            <img src={require("../assets/hero.png")} alt="Modern Architecture" />
+            {/* <img src={require("../assets/hero.png")} alt="Modern Architecture" /> */}
 
             <div className='hero_fade'>
                 <div className='hero_content'>

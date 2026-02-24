@@ -27,7 +27,7 @@ export const Reveal = ({ children, width = "100%", delay = 0 }) => {
       style={{ 
         width, 
         position: "relative",
-        transitionDelay: `${delay}ms` // Add the delay here
+        transitionDelay: `${delay}ms`
       }}
       className={`reveal-section ${isVisible ? "is-visible" : ""}`}
     >

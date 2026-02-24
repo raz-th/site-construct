@@ -1,8 +1,10 @@
 .hero {
-  width: 100%;
   position: relative;
-  overflow: hidden;
-  /* Safety measure */
+  min-height: 100vh;
+  background-image: var(--gradient-hero), url("../../assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
 }
 
 .hero img {
@@ -10,19 +12,22 @@
   display: block;
   height: auto;
   object-fit: cover;
-  height: 100vh;
+  max-height: 100vh;
   object-position: 0 15%;
 }
 
 .hero_fade {
   position: absolute;
+  inset: 0;            
+  /* background-image: var(--gradient-hero); */
+  z-index: 1;            
+  pointer-events: none;
+  transform: translateZ(0);
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
-  background: var(--gradient-hero);
   z-index: 10;
-  pointer-events: none;
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -106,6 +111,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;
+  text-align: center;
 }
 
 .btn-secondary:hover {
