@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import "./Style/Despre.css";
 import { Reveal } from './Reveal';

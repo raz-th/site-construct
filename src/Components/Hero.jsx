@@ -1,9 +1,9 @@
-import React from 'react';
+// import React from 'react';
 import './Style/Hero.css';
 import { PiMedal } from "react-icons/pi";
 import { FaArrowRight } from 'react-icons/fa';
 import { HiOutlineNewspaper } from "react-icons/hi2";
-import { IoPeopleSharp } from 'react-icons/io5';
+// import { IoPeopleSharp } from 'react-icons/io5';
 import { Reveal } from './Reveal';
 import { an_curent, an_inceput, clienti_multumiti, proiecte_finalizate } from '../config/site';
 import { LuUsersRound } from 'react-icons/lu';

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { IoLocationOutline, IoCallOutline, IoMailOutline, IoTimeOutline } from "react-icons/io5";
 import "./Style/Contact.css";
 import { Reveal } from './Reveal';
 import { adresa, email, numar_telefon, program } from '../config/site';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import { sendEmail } from '../sendEmail';
 
 const tipuri_casa = [

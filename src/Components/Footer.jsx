@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import "./Style/Footer.css";
 import { an_inceput, logo192, nume_complet } from '../config/site';
 

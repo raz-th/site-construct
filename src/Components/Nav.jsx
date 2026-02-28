@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiPhone } from "react-icons/fi";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Style/Nav.css"
@@ -21,21 +21,23 @@ const Nav = () => {
     const [scrollWidth, setScrollWidth] = useState(0);
 
     const controlNavbar = () => {
-        if (typeof window !== 'undefined') {
-            if (window.scrollY > 50) {
-                setIsVisible(true); // Keep visible
-                document.querySelector('header').classList.add('glass');
-            } else {
-                document.querySelector('header').classList.remove('glass');
+        try {
+            if (typeof window !== 'undefined') {
+                if (window.scrollY > 50) {
+                    setIsVisible(true); // Keep visible
+                    document.querySelector('header').classList.add('glass');
+                } else {
+                    document.querySelector('header').classList.remove('glass');
+                }
+                if (window.scrollY > lastScrollY) setIsVisible(false);
+                else setIsVisible(true);
+                setLastScrollY(window.scrollY);
+                const winScroll = document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                setScrollWidth(scrolled);
             }
-            if (window.scrollY > lastScrollY) setIsVisible(false);
-            else setIsVisible(true);
-            setLastScrollY(window.scrollY);
-            const winScroll = document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            setScrollWidth(scrolled);
-        }
+        }catch (err){}
     };
 
     useEffect(() => {
@@ -53,8 +55,8 @@ const Nav = () => {
                     {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
                     <div>
                         <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
-                        <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i)=>i>0?v+" ":'')}</p>
-                        
+                        <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i) => i > 0 ? v + " " : '')}</p>
+
                     </div>
                 </div>
                 <nav className="nav-section">
@@ -78,7 +80,7 @@ const Nav = () => {
                 <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
                 <button className='btn-primary'>Solicită Ofertă</button>
             </nav>
-            <div className='scrollbar-container' style={{background: scrollWidth>0?"#1a1e24":"transparent"}}>
+            <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
                 <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
             </div>
         </header>

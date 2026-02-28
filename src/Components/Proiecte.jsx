@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./Style/Proiecte.css"
 import { LuArrowUpRight } from "react-icons/lu";
 import { Reveal } from './Reveal';

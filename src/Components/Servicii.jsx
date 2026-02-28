@@ -1,6 +1,6 @@
-import React from 'react';
-import { GoHome, GoBeaker, GoPencil, GoTools, GoShieldCheck } from "react-icons/go";
-import { LuRuler, LuWrench } from "react-icons/lu";
+// import React from 'react';
+import { GoHome, GoPencil } from "react-icons/go";
+// import { LuRuler, LuWrench } from "react-icons/lu";
 import "./Style/Servicii.css"
 import { Reveal } from './Reveal';
 
