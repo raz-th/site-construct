@@ -1,7 +1,7 @@
 // src/sendEmail.js
 export const sendEmail = async (formData) => {
   try {
-    const response = await fetch("/.netlify/functions/sendEmail", {
+    const response = await fetch("/sendEmail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
