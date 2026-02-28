@@ -78,7 +78,7 @@ const Nav = () => {
                     {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={navigs[key]}>{key}</a></li> })}
                 </ul>
                 <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                <button className='btn-primary'>Solicită Ofertă</button>
+                <a onClick={() => setShowMobileNav(false)} href='#contact' className='btn-primary'>Solicită Ofertă</a>
             </nav>
             <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
                 <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
