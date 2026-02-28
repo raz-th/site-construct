@@ -8,7 +8,7 @@ const Card = ({ title, description, Icon, i, image }) => {
     return (
         <Reveal>
             <div className='card'>
-                <img loading={"lazy"} src={image||require("../assets/dummy.png")} />
+                <img loading={"lazy"} src={image||require("../assets/dummy.png")} alt=""/>
                 <div className='card_content'>
                     <div className='card-icon'>
                         <Icon size={24} />

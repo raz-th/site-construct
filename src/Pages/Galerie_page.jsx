@@ -9,7 +9,7 @@ const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={() => onClick()}>
             <div className="project-image-container">
-                <img src={require(`../assets/poze_galerie/image${image_num}.jpg`)} alt={`Image ${image_num}`} />
+                <img src={require(`../assets/poze_galerie/image${image_num}.jpg`)} alt=""/>
                 {/* <span className="project-tag">{cat[image_num - 1] || category}</span> */}
             </div>
         </div>
@@ -51,6 +51,7 @@ const GaleriePage = () => {
                     <img
                         src={require(`../assets/poze_galerie/image${selected_image}.jpg`)}
                         onClick={(e) => e.stopPropagation()}
+                        alt=''
                     >
 
                     </img>
