@@ -7,7 +7,7 @@ export const sendEmail = async (formData) => {
       body: JSON.stringify({
         toEmail: "raz.taz032023@gmail.com",
         toName: "noreply",
-        subject: "Test Email from Brevo API",
+        subject: "Solicitare Ofertă",
         htmlContent: `
           <html><body>
           <h2>Solicitare Ofertă</h2>
