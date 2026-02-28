@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { FiPhone } from "react-icons/fi";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Style/Nav.css"
@@ -20,11 +20,11 @@ const Nav = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [scrollWidth, setScrollWidth] = useState(0);
 
-    const controlNavbar = () => {
+    const controlNavbar = useCallback(() => {
         try {
             if (typeof window !== 'undefined') {
                 if (window.scrollY > 50) {
-                    setIsVisible(true); // Keep visible
+                    setIsVisible(true);
                     document.querySelector('header').classList.add('glass');
                 } else {
                     document.querySelector('header').classList.remove('glass');
@@ -37,8 +37,8 @@ const Nav = () => {
                 const scrolled = (winScroll / height) * 100;
                 setScrollWidth(scrolled);
             }
-        }catch (err){}
-    };
+        } catch (err) { }
+    }, [lastScrollY]);
 
     useEffect(() => {
         window.addEventListener('scroll', controlNavbar);
@@ -46,7 +46,7 @@ const Nav = () => {
         return () => {
             window.removeEventListener('scroll', controlNavbar);
         };
-    }, [lastScrollY]);
+    }, [controlNavbar]);
 
     return (
         <header className={isVisible ? '' : 'nav-hidden'}>

@@ -15,17 +15,19 @@ export const Reveal = ({ children, width = "100%", delay = 0 }) => {
       { threshold: 0.2 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    const el = ref.current;
+    if (el) observer.observe(el);
+
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (el) observer.unobserve(el);
     };
   }, []);
 
   return (
     <div
       ref={ref}
-      style={{ 
-        width, 
+      style={{
+        width,
         position: "relative",
         transitionDelay: `${delay}ms`
       }}

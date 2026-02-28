@@ -3,7 +3,7 @@ import "./Style/Recenzii.css"
 import { Reveal } from './Reveal';
 
 const Card = ({ data, i }) => {
-    const { descriere, nume, localitate } = data;
+    const { descriere } = data;
     if (window.innerWidth <= 765) {
         return (
             <div className="recenzie-card">

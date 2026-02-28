@@ -15,7 +15,7 @@ const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={() => onClick()}>
             <div className="project-image-container">
-                <img src={require(`../assets/poze_portofoliu/image513/image (${image_num}).png`)} alt={`Image ${image_num}`} />
+                <img src={require(`../assets/poze_portofoliu/image513/image (${image_num}).png`)} alt="Proiect constructii" />
                 <span className="project-tag">{cat[image_num - 1] || category}</span>
             </div>
         </div>
@@ -29,7 +29,7 @@ const Proiecte = ({ setshowNav }) => {
 
     useEffect(() => {
         setshowNav(selected_image ? false : true)
-    }, [selected_image])
+    }, [selected_image, setshowNav]);
 
     const toggleScroll = (lock) => {
         if (lock) {
@@ -42,8 +42,8 @@ const Proiecte = ({ setshowNav }) => {
     return (
         <section className='proiecte' id='proiecte'>
             {selected_image && (
-                <div className='proiecte-preview-image-container' onClick={() => {setSelected_image(null); toggleScroll(false);}}>
-                    <button className='close-btn' onClick={() => {setSelected_image(null); toggleScroll(false);}}>
+                <div className='proiecte-preview-image-container' onClick={() => { setSelected_image(null); toggleScroll(false); }}>
+                    <button className='close-btn' onClick={() => { setSelected_image(null); toggleScroll(false); }}>
                         <MdClose />
                     </button>
                     <button
@@ -58,10 +58,9 @@ const Proiecte = ({ setshowNav }) => {
                     <span className="project-tag">{cat[selected_image - 1] || "da"}</span>
                     <img
                         src={require(`../assets/poze_portofoliu/full_rez/image (${selected_image}).png`)}
+                        alt={`Proiect constructii`}
                         onClick={(e) => e.stopPropagation()}
-                    >
-
-                    </img>
+                    />
 
                     <button
                         className='next-btn right'
@@ -94,7 +93,7 @@ const Proiecte = ({ setshowNav }) => {
 
                 <div className="proiecte-grid">
                     {projects.map((v, index) => (
-                        <ProjectCard key={index} delay={index * 120} image_num={v} onClick={() => {setSelected_image(v); toggleScroll(true);}} />
+                        <ProjectCard key={index} delay={index * 120} image_num={v} onClick={() => { setSelected_image(v); toggleScroll(true); }} />
                     ))}
                 </div>
             </div>

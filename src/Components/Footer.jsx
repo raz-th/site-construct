@@ -12,7 +12,7 @@ const Footer = () => {
                 {/* Coloana 1: Logo și Info */}
                 <div className="footer-brand">
                     <div className="footer-logo">
-                        <span className="logo-icon"><img width={35} src={logo192}/></span>
+                        <span className="logo-icon"><img width={35} src={logo192} alt=""/></span>
                         <h4>{nume_complet}</h4>
                     </div>
                     <p className="brand-text">
@@ -20,9 +20,9 @@ const Footer = () => {
                         Experiență, calitate și profesionalism la cele mai înalte standarde.
                     </p>
                     <div className="social-links">
-                        <a href="#"><FaFacebookF /></a>
+                        <a href="/#"><FaFacebookF /></a>
                         {/* <a href="#"><FaInstagram /></a> */}
-                        <a href="#"><FaLinkedinIn /></a>
+                        <a href="/#"><FaLinkedinIn /></a>
                         {/* <a href="#"><FaYoutube /></a> */}
                     </div>
                 </div>
@@ -32,9 +32,9 @@ const Footer = () => {
                     <h4>Servicii</h4>
                     <ul>
                         {/* <li><a href="#">Case Unifamiliale</a></li> */}
-                        <li><a href="#">Vile de Lux</a></li>
-                        <li><a href="#">Renovări Complete</a></li>
-                        <li><a href="#">Consultanță Tehnică</a></li>
+                        <li><a href="/#">Vile de Lux</a></li>
+                        <li><a href="/#">Renovări Complete</a></li>
+                        <li><a href="/#">Consultanță Tehnică</a></li>
                     </ul>
                 </div>
 
@@ -54,9 +54,9 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Termeni și Condiții</a></li>
-                        <li><a href="#">Politica de Confidențialitate</a></li>
-                        <li><a href="#">Cookies</a></li>
+                        <li><a href="/#">Termeni și Condiții</a></li>
+                        <li><a href="/#">Politica de Confidențialitate</a></li>
+                        <li><a href="/#">Cookies</a></li>
                     </ul>
                 </div>
             </div>
