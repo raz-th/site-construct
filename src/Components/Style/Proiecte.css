@@ -1,0 +1,239 @@
+.proiecte {
+    padding: 2rem 4rem;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.proiecte-preview-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: #1a1e24ae;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    align-items: center;
+}
+
+.proiecte-preview-image-container img {
+    /* width: 30vw; */
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 20px;
+    object-position: 0 0;
+}
+
+.proiecte-preview-image-container .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.proiecte-preview-image-container .next-btn {
+    position: absolute;
+    top: 50%;
+    /* right: 5%; */
+    transform: translateY(-50%);
+    background-color: var(--surface-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.proiecte-preview-image-container .next-btn.left {
+    left: 5%;
+}
+
+.proiecte-preview-image-container .next-btn.right {
+    right: 5%;
+}
+
+.proiecte-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 6rem 4rem;
+}
+
+/* Header Styling */
+.proiecte-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    /* background-color: red; */
+}
+
+.proiecte .subtitle {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+.proiecte h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #1a1e24;
+    margin-bottom: 1rem;
+}
+
+.proiecte h2 span {
+    color: var(--accent-color);
+    /* Or use your gold gradient */
+}
+
+.proiecte .description {
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.btn-view-all {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-view-all:hover {
+    background: var(--gradient-gold);
+    color: white;
+}
+
+
+/* Grid & Card Styling */
+
+.proiecte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    cursor: pointer;
+}
+
+/* .proiecte-grid {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 30px;
+}
+
+.project-card {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 20vw;
+} */
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+
+.project-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.project-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+    color: #1a1e24;
+}
+
+.project-info p {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .proiecte-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proiecte-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .proiecte-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .proiecte {
+        padding: 1rem 1.5rem;
+    }
+
+    .header-text h2 {
+        font-size: 2rem;
+    }
+
+    .proiecte-content {
+        padding: 1rem 0rem;
+    }
+
+    .proiecte-preview-image-container img {
+        height: min-content;
+        width: 98vw;
+    }
+    .proiecte-preview-image-container .next-btn {
+        transform: translateY(0);
+        top: unset;
+        bottom: 10%;
+    }
+}
