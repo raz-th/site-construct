@@ -1,20 +1,4 @@
 name = "site-construct"
 compatibility_date = "2025-09-27"
 compatibility_flags = ["nodejs_compat"]
-
-[build]
-command = "npm run pages:build"
-
-[[pages.build_output_dir]]
-dir = ".vercel/output/static"
-```
-
-**5. În Cloudflare Pages setează:**
-```
-Build command: npx @cloudflare/next-on-pages
-Build output directory: .vercel/output/static
-```
-
-**6. Adaugă variabila de environment:**
-```
-NODE_VERSION = 18
+pages_build_output_dir = ".vercel/output/static"
