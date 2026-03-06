@@ -2,7 +2,8 @@ import React from 'react';
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import "./Style/Footer.css";
 import { an_inceput, nume_complet } from '../config/site';
-import logo192 from "../assets/logo192.png"
+
+const logo192 = "/assets/logo192.png"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();

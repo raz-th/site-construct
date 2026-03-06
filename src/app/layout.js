@@ -1,7 +1,8 @@
 // src/app/layout.jsx
 import "./globals.css";
 import { NavProvider } from './NavContext';
-import Nav from '../Components/Nav';
+import Nav from '@/Components/Nav';
+import Footer from "@/Components/Footer";
 
 
 export const metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           <Nav />
           {children}
         </NavProvider>
+        <Footer/>
       </body>
     </html>
   );

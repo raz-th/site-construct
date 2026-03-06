@@ -1,6 +1,6 @@
 import Contact from '../Components/Contact';
 import Despre from '../Components/Despre';
-import Footer from '../Components/Footer';
+// import Footer from '../Components/Footer';
 import Hero from '../Components/Hero';
 import Proiecte from '../Components/Proiecte';
 import Recenzii from '../Components/Recenzii';
@@ -15,7 +15,7 @@ export default function HomePage() {
       <Recenzii/>
       <Despre/>
       <Contact/>
-      <Footer/>
+      {/* <Footer/> */}
     </main>
   );
 }

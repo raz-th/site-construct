@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background-image: var(--gradient-hero), url("../../assets/hero.png");
+  background-image: var(--gradient-hero), url("/assets/hero.png");
   background-size: cover;
   background-position: center;
   isolation: isolate;
