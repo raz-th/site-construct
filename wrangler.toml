@@ -2,3 +2,6 @@ name = "site-construct"
 compatibility_date = "2025-09-27"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+[build]
+command = "npm install --legacy-peer-deps && npx @cloudflare/next-on-pages"
