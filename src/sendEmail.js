@@ -5,7 +5,7 @@ export const sendEmail = async (formData) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        toEmail: "raz.taz032023@gmail.com",
+        toEmail: "niculae.razvanwork@gmail.com",
         toName: "noreply",
         subject: "Solicitare Ofertă",
         htmlContent: `

@@ -126,6 +126,23 @@ nav.nav-section ul a {
   transition: transform 0.3s ease-in-out;
 }
 
+.btn-primary {
+  background: var(--gradient-gold);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  transition: transform 0.2s;
+  font-size: 1rem;
+}
+
 .mobile-nav-menu .btn-primary {
   width: 100%;
   display: flex;
@@ -144,7 +161,7 @@ nav.nav-section ul a {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   header {
     padding: 1rem;
 

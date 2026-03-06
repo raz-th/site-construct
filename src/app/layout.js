@@ -3,6 +3,7 @@ import "./globals.css";
 import { NavProvider } from './NavContext';
 import Nav from '@/Components/Nav';
 import Footer from "@/Components/Footer";
+import CookieBanner from "@/Components/CookieBanner";
 
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body>
         <NavProvider>
           <Nav />
+          <CookieBanner/>
           {children}
         </NavProvider>
         <Footer/>

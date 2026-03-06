@@ -5,6 +5,8 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import "./Style/Nav.css"
 import { numar_telefon, nume_complet } from '../config/site';
 import { useNavProv } from '../app/NavContext';
+import { MdClose } from 'react-icons/md';
+import { useRouter } from 'next/navigation';
 
 
 const navigs = {
@@ -23,7 +25,7 @@ const Nav = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [scrollWidth, setScrollWidth] = useState(0);
     const { showNav } = useNavProv();
-
+    const nav = useRouter();
     const controlNavbar = useCallback(() => {
         try {
             if (typeof window !== 'undefined') {
@@ -57,7 +59,7 @@ const Nav = () => {
         return (
             <header className={isVisible ? '' : 'nav-hidden'}>
                 <div className='header-content'>
-                    <div className='nav-section'>
+                    <div className='nav-section' style={{cursor: 'pointer'}} onClick={()=>nav.push("/")}>
                         {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
                         <div>
                             <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
@@ -67,12 +69,12 @@ const Nav = () => {
                     </div>
                     <nav className="nav-section">
                         <ul>
-                            {Object.keys(navigs).map((key, i) => { return <li key={i}><a href={navigs[key]}>{key}</a></li> })}
+                            {Object.keys(navigs).map((key, i) => { return <li key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
                         </ul>
                     </nav>
                     <div className="nav-section">
                         <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                        <a className='btn-primary' href='#contact'>Solicită Ofertă</a>
+                        <a className='btn-primary' href='/#contact'>Solicită Ofertă</a>
                     </div>
                     <div className="nav-section">
                         {showMobileNav ? <IoClose size={35} onClick={() => setShowMobileNav((v) => !v)} /> : <IoMenu size={35} onClick={() => setShowMobileNav((v) => !v)} />}
@@ -81,10 +83,10 @@ const Nav = () => {
                 </div>
                 <nav className={`mobile-nav-menu ${showMobileNav ? "show" : "hide"}`}>
                     <ul>
-                        {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={navigs[key]}>{key}</a></li> })}
+                        {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
                     </ul>
                     <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                    <a onClick={() => setShowMobileNav(false)} href='#contact' className='btn-primary'>Solicită Ofertă</a>
+                    <a onClick={() => setShowMobileNav(false)} href='/#contact' className='btn-primary'>Solicită Ofertă</a>
                 </nav>
                 <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
                     <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />

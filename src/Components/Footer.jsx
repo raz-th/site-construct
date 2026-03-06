@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import "./Style/Footer.css";
 import { an_inceput, nume_complet, logo192 } from '../config/site';
 
@@ -21,9 +21,9 @@ const Footer = () => {
                         Experiență, calitate și profesionalism la cele mai înalte standarde.
                     </p>
                     <div className="social-links">
-                        <a href="/#"><FaFacebookF /></a>
-                        {/* <a href="#"><FaInstagram /></a> */}
-                        <a href="/#"><FaLinkedinIn /></a>
+                        {/* <a href="/#"><FaFacebookF /></a> */}
+                        <a href="https://www.instagram.com/aurvis_construct/" target="_blank"><FaInstagram /></a>
+                        {/* <a href="/#"><FaLinkedinIn /></a> */}
                         {/* <a href="#"><FaYoutube /></a> */}
                     </div>
                 </div>
@@ -55,9 +55,9 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/#">Termeni și Condiții</a></li>
-                        <li><a href="/#">Politica de Confidențialitate</a></li>
-                        <li><a href="/#">Cookies</a></li>
+                        <li><a href="/termeni-si-conditii">Termeni și Condiții</a></li>
+                        <li><a href="/politica-confidentialitate">Politica de Confidențialitate</a></li>
+                        <li><a href="/politica-cookies">Cookies</a></li>
                     </ul>
                 </div>
             </div>
