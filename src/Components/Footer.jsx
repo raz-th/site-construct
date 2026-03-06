@@ -1,9 +1,8 @@
 import React from 'react';
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import "./Style/Footer.css";
-import { an_inceput, nume_complet } from '../config/site';
+import { an_inceput, nume_complet, logo192 } from '../config/site';
 
-const logo192 = "/assets/logo192.png"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -34,9 +33,9 @@ const Footer = () => {
                     <h4>Servicii</h4>
                     <ul>
                         {/* <li><a href="#">Case Unifamiliale</a></li> */}
-                        <li><a href="/#">Vile de Lux</a></li>
-                        <li><a href="/#">Renovări Complete</a></li>
-                        <li><a href="/#">Consultanță Tehnică</a></li>
+                        <li><a href="/#servicii">Vile de Lux</a></li>
+                        <li><a href="/#servicii">Case Moderne</a></li>
+                        <li><a href="/#servicii">Proiectare Arhitecturală</a></li>
                     </ul>
                 </div>
 

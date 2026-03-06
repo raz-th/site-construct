@@ -17,7 +17,7 @@ const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={() => onClick()}>
             <div className="project-image-container">
-                <img src={`/poze_portofoliu/image513/image (${image_num}).png`} alt="Proiect constructii" />
+                <img src={`/poze_portofoliu/image513/image_(${image_num}).png`} alt="Proiect constructii" />
                 <span className="project-tag">{cat[image_num - 1] || category}</span>
             </div>
         </div>
@@ -59,7 +59,7 @@ const Proiecte = () => {
                     </button>
                     <span className="project-tag">{cat[selected_image - 1] || "da"}</span>
                     <img
-                        src={`/poze_portofoliu/full_rez/image (${selected_image}).png`}
+                        src={`/poze_portofoliu/full_rez/image_(${selected_image}).png`}
                         alt={`Proiect constructii`}
                         onClick={(e) => e.stopPropagation()}
                     />
