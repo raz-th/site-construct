@@ -216,8 +216,8 @@ export default function ConstructiiCasePage() {
         <div className="const_sectionheader">
           <Reveal>
             <div className="const_sectionheader-text">
-              <p className="subtitle">SERVICII</p>
-              <h2>Serviciile <span>Noastre</span></h2>
+              <p className="subtitle">De Ce Noi</p>
+              <h2>De Ce Să Alegi Firma Noastră</h2>
             </div>
           </Reveal>
         </div>
