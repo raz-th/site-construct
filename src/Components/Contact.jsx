@@ -3,16 +3,10 @@ import { useState } from 'react';
 import { IoLocationOutline, IoCallOutline, IoMailOutline, IoTimeOutline } from "react-icons/io5";
 import "./Style/Contact.css";
 import { Reveal } from './Reveal';
-import { adresa, email, numar_telefon, program } from '../config/site';
+import { adresa, email, numar_telefon, program, tipuri_casa } from '../config/site';
 // import emailjs from '@emailjs/browser';
 import { sendEmail } from '../sendEmail';
 
-const tipuri_casa = [
-    "Casă din lemn",
-    "Casă din cărămidă sau BCA (zidărie)",
-    "Casă pe structură metalică",
-    "Casă din beton"
-]
 
 const Contact = () => {
     const [formData, setFormData] = useState({ name: "", phone: "", email: "", projectType: "", details: "" })

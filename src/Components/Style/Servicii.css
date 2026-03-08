@@ -56,7 +56,7 @@
 /* Card Styling */
 .servicii .card {
     background-color: #fff;
-
+    height: 100%;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: left;

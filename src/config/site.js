@@ -8,3 +8,9 @@ export const clienti_multumiti = 20;
 export const adresa = ["Str. Valea Crangului 38", "Giurgiu"]
 export const program = ["Luni - Vineri: 08:00 - 18:00", "Sâmbătă: 09:00 - 14:00"]
 export const email = "contact@gmail.ro"
+export const tipuri_casa = [
+    "Casă din lemn",
+    "Casă din cărămidă sau BCA (zidărie)",
+    "Casă pe structură metalică",
+    "Casă din beton"
+]

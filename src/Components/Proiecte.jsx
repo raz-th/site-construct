@@ -82,7 +82,7 @@ const Proiecte = () => {
                             <p className="subtitle">PORTOFOLIU</p>
                             <h2>Lucrări <span>Realizate</span></h2>
                             <p className="description">
-                                O selecție din proiectele noastre recente – de la case moderne la vile premium și lucrări aflate în execuție.
+                                O selecție din proiectele noastre recente - de la case moderne la vile premium și lucrări aflate în execuție.
                             </p>
                         </div>
                     </Reveal>

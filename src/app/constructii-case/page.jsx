@@ -1,0 +1,282 @@
+// import Link from 'next/link';
+import './constructii-case.css';
+import { Reveal } from '@/Components/Reveal';
+import { FaArrowRight } from 'react-icons/fa';
+import { an_curent, an_inceput } from '@/config/site';
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import ContactUnic from './Contact_unic';
+import IntrebariUnic from './Intrebari_unic';
+
+export const metadata = {
+  title: "Construcții Case | AURVIS CONSTRUCT DESIGN",
+  description: "Construim case moderne și vile de lux în București, Ilfov și județul Giurgiu. Servicii complete de construcții case de la fundație până la finisaje.",
+  keywords: "constructii case, constructii case bucuresti, firma constructii case",
+};
+
+
+const Card = ({ title = " ", continut = " ", link, i }) => {
+  return (
+    <Reveal width='fit-content'>
+      <div className='card'>
+        <h1>
+          {title}
+        </h1>
+        <p>
+          {continut}
+        </p>
+        {link && (<a href={link || "/"}>Află mai multe <FaArrowRight /></a>)}
+      </div>
+    </Reveal>
+  )
+}
+
+const CardEtapa = ({ title = " ", continut = " ", i }) => {
+  return (
+    <Reveal width='fit-content' >
+      <div className='cardEtapa'>
+        <div className='cardEtapa_i'>
+          {i + 1}
+        </div>
+        <h1>
+          {title}
+        </h1>
+        <p>
+          {continut}
+        </p>
+      </div>
+    </Reveal>
+  )
+}
+
+const servicii = [
+  {
+    title: "Construcții Case La Roșu",
+    continut: "Structura completă a casei - fundație, pereți, planșee și acoperiș - la cel mai bun raport calitate-preț.",
+    link: "/"
+  },
+  {
+    title: "Construcții Case la Cheie",
+    continut: "Casă complet finisată și gata de locuit, de la fundație până la mobilier, într-un singur contract.",
+    link: "/"
+  }
+];
+
+const dece = [
+  {
+    title: `Experiență de ${parseInt((an_curent - an_inceput) / 10)}0+ Ani`,
+    continut: "Peste 40 de proiecte finalizate cu succes. Cunoaștem fiecare etapă a construcției și anticipăm provocările înainte să apară.",
+  },
+  {
+    title: "Echipă Calificată",
+    continut: "Meșterii noștri sunt certificați și au experiență în construcții rezidențiale moderne. Fiecare specialist lucrează în domeniul său de expertiză.",
+  },
+  {
+    title: "Materiale de Calitate",
+    continut: "Colaborăm doar cu furnizori de materiale de construcții certificate. Folosim beton de înaltă rezistență, cărămidă premium și izolații de ultimă generație.",
+  },
+  {
+    title: "Respectarea Termenelor",
+    continut: "Planificăm fiecare etapă cu precizie și respectăm termenele asumate. Primiți rapoarte săptămânale de progres.",
+  },
+  {
+    title: "Transparență Totală",
+    continut: "Costuri clare de la început, fără surprize. Aveți acces permanent la șantier și comunicare constantă cu managerul de proiect.",
+  },
+]
+
+const etape = [
+  {
+    title: 'Consultanță & Proiect',
+    des: 'Analiză teren, discutarea cerințelor, proiect arhitectural și obținerea autorizațiilor.'
+  },
+  {
+    title: 'Pregătire Teren',
+    des: 'Decopertare, săpătură, nivelare și pregătirea amplasamentului pentru turnarea fundației.'
+  },
+  {
+    title: 'Fundația',
+    des: 'Armare, cofrare și turnare fundație din beton armat C25/30, conform studiului geotehnic.'
+  },
+  {
+    title: 'Structura & Zidăria',
+    des: 'Ridicare pereți, stâlpi, grinzi, planșee - structura de rezistență completă a casei.'
+  },
+  {
+    title: 'Acoperișul',
+    des: 'Montare șarpantă din lemn tratat, învelitoare, hidroizolație, jgheaburi și burlane.'
+  },
+  {
+    title: 'Instalațiile',
+    des: 'Instalații electrice, sanitare, termice și de ventilație conform normativelor în vigoare.'
+  },
+  {
+    title: 'Finisajele',
+    des: 'Tencuieli, pardoseli, gresie, faianță, vopsitorii decorative și tâmplărie interioară.'
+  },
+  {
+    title: 'Predarea Cheilor',
+    des: 'Verificări finale, recepție, curățenie profesională și predarea casei finalizate.'
+  }
+]
+
+const avantaje = [
+  "Proiect arhitectural inclus în preț",
+  "Materiale de construcție certificate și trasabile",
+  "Izolație termică și fonică la standarde europene",
+  "Instalații electrice și sanitare cu certificat de garanție",
+  "Sisteme de încălzire eficiente energetic",
+  "Finisaje interioare și exterioare la alegere",
+]
+
+const intrebari_frec = [
+  { question: "Cât costă construcția unei case?", answer: "Prețul variază în funcție de tipul construcției: casa la roșu costă între 300-450 €/mp, iar casa la cheie între 700-1200 €/mp. Prețul final depinde de complexitatea proiectului, materialele alese și suprafața construită." },
+  { question: "Cât durează construcția unei case?", answer: "O casă la roșu se construiește în 3-5 luni, iar o casă la cheie în 6-12 luni, în funcție de complexitate și condițiile meteo. Oferim un calendar detaliat de execuție la semnarea contractului." },
+  { question: "Ce include construcția la roșu?", answer: "Construcția la roșu include fundația, structura de rezistență (stâlpi, grinzi, planșee), zidăria exterioară și acoperișul. Nu include instalații, finisaje interioare sau amenajări exterioare." },
+  { question: "Ce materiale folosiți?", answer: "Folosim materiale certificate de la furnizori de încredere: beton C25/30 minim, BCA sau cărămidă premium, fier beton certificat, lemn tratat pentru șarpantă și izolații de ultimă generație." },
+  // { question: "Oferiți garanție pentru lucrări?", answer: "Da, oferim garanție de 10 ani pentru structură și 5 ani pentru finisaje. Echipa noastră de service intervine în maxim 48 de ore pentru orice problemă." },
+  { question: "Vă ocupați și de autorizații?", answer: "Da, ne ocupăm de întreaga documentație: certificat de urbanism, proiect tehnic, autorizație de construire și toate avizele necesare." },
+]
+
+export default function ConstructiiCasePage() {
+  return (
+    <div className="serviciu-page">
+
+      <div className='const_hero_fade'>
+        <div className='const_hero_content'>
+          {/* <Reveal>
+            <div className='badge'>
+              <PiMedal /> Peste {parseInt((an_curent - an_inceput) / 10)}0 de ani de excelență în construcții
+            </div>
+          </Reveal> */}
+
+
+          <Reveal>
+            <h1>
+              Construcții Case - Servicii Profesionale de Construire Case
+            </h1>
+          </Reveal>
+
+          <Reveal>
+            <p className='const_hero_description'>
+              Construim case de la zero, cu materiale premium și echipe de specialiști. Cu o experiență de
+              peste {parseInt((an_curent - an_inceput) / 10)}0 ani în domeniul construcțiilor rezidențiale, suntem partenerul de încredere pentru casa visurilor dumneavoastră.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <div className='const_hero_actions'>
+              <a href='#proiecte' className='btn-primary'>
+                Solicită Ofertă Gratuită <FaArrowRight />
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+      <section className='const_section1'>
+        <Reveal delay={0}>
+          <p className='introDes'>
+            Firma noastră oferă servicii complete de construcții case în toată zona de vest a României. Cu o echipă de peste 30 de profesioniști calificați și certificați,
+            am construit peste 150 de case rezidențiale, de la vile moderne la case tradiționale. Fiecare proiect beneficiază de atenția noastră la detalii, materiale de cea mai
+            înaltă calitate și un management de proiect riguros.
+          </p>
+        </Reveal>
+        <Reveal delay={1}>
+          <p className='introDes'>
+            Construim o gamă variată de locuințe: case cu un nivel, case cu etaj, case cu mansardă, duplex-uri și vile. Lucrăm atât în mediul urban, cât și în zonele rurale,
+            adaptându-ne la specificul fiecărui teren și la cerințele urbanistice locale. Zonele în care activăm includ Timișoara, Arad, Oradea și localitățile limitrofe.
+          </p>
+        </Reveal>
+        <Reveal delay={2}>
+          <p className='introDes'>
+            Indiferent dacă doriți o construcție la roșu pe care să o finisați în ritmul propriu sau o casă la cheie gata de mutat, vă putem oferi soluția optimă,
+            adaptată bugetului și nevoilor familiei dumneavoastră.
+          </p>
+        </Reveal>
+      </section>
+      <section className='const_section2'>
+        <div className="const_sectionheader">
+          <Reveal>
+            <div className="const_sectionheader-text">
+              <p className="subtitle">SERVICII</p>
+              <h2>Serviciile <span>Noastre</span></h2>
+            </div>
+          </Reveal>
+        </div>
+        <div className='const_section_grid'>
+          {
+            servicii.map((v, i) => {
+              return (
+                <Card key={i} title={v.title} continut={v.continut} link={v.link} />
+              )
+            })
+          }
+        </div>
+      </section>
+      <section className='const_section2'>
+        <div className="const_sectionheader">
+          <Reveal>
+            <div className="const_sectionheader-text">
+              <p className="subtitle">SERVICII</p>
+              <h2>Serviciile <span>Noastre</span></h2>
+            </div>
+          </Reveal>
+        </div>
+        <div className='const_section_grid2'>
+          {
+            dece.map((v, i) => {
+              return (
+                <Card i={i} key={i} title={v.title} continut={v.continut} link={v.link} />
+              )
+            })
+          }
+        </div>
+      </section>
+      <section className='const_section1'>
+        <div className="const_sectionheader">
+          <Reveal>
+            <div className="const_sectionheader-text">
+              <p className="subtitle">Etapele Construcției</p>
+              <h2>Etapele Construcției unei Case</h2>
+            </div>
+          </Reveal>
+        </div>
+        <div className='const_section_grid3'>
+          {
+            etape.map((v, i) => {
+              return (
+                <CardEtapa i={i} key={i} title={v.title} continut={v.des} />
+              )
+            })
+          }
+        </div>
+      </section>
+      <section className='const_section3'>
+        <div className='contact_content'>
+          <Reveal width='fit-content'>
+            <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }}>
+              <p className="subtitle">AVANTAJE</p>
+              <h2>Beneficiile <span>Colaborării</span></h2>
+              <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
+                {
+                  avantaje.map((v, i) => <li style={{ display: 'flex', alignItems: 'center', gap: 10 }} key={i}><IoMdCheckmarkCircleOutline size={20} color='var(--accent-color)' />{v}</li>)
+                }
+              </ol>
+            </div>
+          </Reveal>
+          <ContactUnic />
+        </div>
+      </section>
+      <section className='const_section2'>
+        <div className="const_sectionheader">
+          <Reveal>
+            <div className="const_sectionheader-text">
+              <p className="subtitle">Întrebări Frecvente</p>
+              <h2>Ai <span>Întrebări?</span></h2>
+            </div>
+          </Reveal>
+        </div>
+        <IntrebariUnic intrebari={intrebari_frec} />
+      </section>
+    </div>
+  );
+}
