@@ -10,14 +10,14 @@ import { useNavProv } from '../app/NavContext';
 
 // require("../assets/poze_portofoliu/image (1).png")
 
-const cat = ["FINALIZAT", "FINALIZAT", "FINALIZAT", "ÎN EXECUȚIE", "ÎN EXECUȚIE", "ÎN EXECUȚIE"]
+const cat = ["FINALIZAT", "FINALIZAT", "ÎN EXECUȚIE", "ÎN EXECUȚIE", "ÎN EXECUȚIE", "ÎN EXECUȚIE"]
 
 
 const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={() => onClick()}>
             <div className="project-image-container">
-                <img src={`/poze_portofoliu/image513/image_(${image_num}).png`} alt="Proiect constructii" />
+                <img src={`/poze_portofoliu/image513/image_(${image_num}).jpg`} alt="Proiect constructii" />
                 <span className="project-tag">{cat[image_num - 1] || category}</span>
             </div>
         </div>
@@ -59,7 +59,7 @@ const Proiecte = () => {
                     </button>
                     <span className="project-tag">{cat[selected_image - 1] || "da"}</span>
                     <img
-                        src={`/poze_portofoliu/full_rez/image_(${selected_image}).png`}
+                        src={`/poze_portofoliu/full_rez/image_(${selected_image}).jpg`}
                         alt={`Proiect constructii`}
                         onClick={(e) => e.stopPropagation()}
                     />
@@ -88,7 +88,7 @@ const Proiecte = () => {
                     </Reveal>
                     <Reveal width='fit-content'>
                         <button className="btn-view-all" onClick={() => nav.push("/galerie")}>
-                            Vezi Toate Proiectele <span><LuArrowUpRight /></span>
+                            Vezi Mai Multe <span><LuArrowUpRight /></span>
                         </button>
                     </Reveal>
                 </div>

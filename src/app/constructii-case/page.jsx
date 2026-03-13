@@ -1,7 +1,7 @@
 // import Link from 'next/link';
 import './constructii-case.css';
 import { Reveal } from '@/Components/Reveal';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { an_curent, an_inceput } from '@/config/site';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import ContactUnic from './Contact_unic';
@@ -14,10 +14,10 @@ export const metadata = {
 };
 
 
-const Card = ({ title = " ", continut = " ", link, i }) => {
+const Card = ({ title = " ", continut = " ", link }) => {
   return (
     <Reveal width='fit-content'>
-      <div className='card'>
+      <div className='card_const_case '>
         <h1>
           {title}
         </h1>
@@ -52,12 +52,12 @@ const servicii = [
   {
     title: "Construcții Case La Roșu",
     continut: "Structura completă a casei - fundație, pereți, planșee și acoperiș - la cel mai bun raport calitate-preț.",
-    link: "/"
+    link: "/case-la-rosu"
   },
   {
     title: "Construcții Case la Cheie",
     continut: "Casă complet finisată și gata de locuit, de la fundație până la mobilier, într-un singur contract.",
-    link: "/"
+    link: "/case-la-cheie"
   }
 ];
 
@@ -120,7 +120,7 @@ const etape = [
 ]
 
 const avantaje = [
-  "Proiect arhitectural inclus în preț",
+  // "Proiect arhitectural inclus în preț",
   "Materiale de construcție certificate și trasabile",
   "Izolație termică și fonică la standarde europene",
   "Instalații electrice și sanitare cu certificat de garanție",
@@ -133,8 +133,8 @@ const intrebari_frec = [
   { question: "Cât durează construcția unei case?", answer: "O casă la roșu se construiește în 3-5 luni, iar o casă la cheie în 6-12 luni, în funcție de complexitate și condițiile meteo. Oferim un calendar detaliat de execuție la semnarea contractului." },
   { question: "Ce include construcția la roșu?", answer: "Construcția la roșu include fundația, structura de rezistență (stâlpi, grinzi, planșee), zidăria exterioară și acoperișul. Nu include instalații, finisaje interioare sau amenajări exterioare." },
   { question: "Ce materiale folosiți?", answer: "Folosim materiale certificate de la furnizori de încredere: beton C25/30 minim, BCA sau cărămidă premium, fier beton certificat, lemn tratat pentru șarpantă și izolații de ultimă generație." },
-  // { question: "Oferiți garanție pentru lucrări?", answer: "Da, oferim garanție de 10 ani pentru structură și 5 ani pentru finisaje. Echipa noastră de service intervine în maxim 48 de ore pentru orice problemă." },
-  { question: "Vă ocupați și de autorizații?", answer: "Da, ne ocupăm de întreaga documentație: certificat de urbanism, proiect tehnic, autorizație de construire și toate avizele necesare." },
+  { question: "Oferiți garanție pentru lucrări?", answer: "În prezent nu oferim garanție formală pentru lucrări. Ne concentrăm însă pe realizarea construcțiilor cu atenție la detalii și utilizarea unor materiale de calitate, pentru a asigura durabilitatea și siguranța fiecărui proiect." },
+  { question: "Oferiți și servicii de proiectare?", answer: "Nu oferim servicii de proiectare. Lucrăm pe baza proiectului furnizat de client sau realizat de arhitectul ales de acesta, iar echipa noastră se ocupă de execuția construcției conform planurilor tehnice." },
 ]
 
 export default function ConstructiiCasePage() {
@@ -149,7 +149,7 @@ export default function ConstructiiCasePage() {
             </div>
           </Reveal> */}
 
-
+          <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
           <Reveal>
             <h1>
               Construcții Case - Servicii Profesionale de Construire Case
@@ -165,7 +165,7 @@ export default function ConstructiiCasePage() {
 
           <Reveal>
             <div className='const_hero_actions'>
-              <a href='#proiecte' className='btn-primary'>
+              <a href='#contact' className='btn-primary'>
                 Solicită Ofertă Gratuită <FaArrowRight />
               </a>
             </div>
@@ -175,15 +175,15 @@ export default function ConstructiiCasePage() {
       <section className='const_section1'>
         <Reveal delay={0}>
           <p className='introDes'>
-            Firma noastră oferă servicii complete de construcții case în toată zona de vest a României. Cu o echipă de peste 30 de profesioniști calificați și certificați,
-            am construit peste 150 de case rezidențiale, de la vile moderne la case tradiționale. Fiecare proiect beneficiază de atenția noastră la detalii, materiale de cea mai
+            Firma noastră oferă servicii complete de construcții case în toată zona de vest a României. Cu o echipă numeroasă de profesioniști calificați
+            construim case rezidențiale, de la vile moderne la case tradiționale. Fiecare proiect beneficiază de atenția noastră la detalii, materiale de cea mai
             înaltă calitate și un management de proiect riguros.
           </p>
         </Reveal>
         <Reveal delay={1}>
           <p className='introDes'>
-            Construim o gamă variată de locuințe: case cu un nivel, case cu etaj, case cu mansardă, duplex-uri și vile. Lucrăm atât în mediul urban, cât și în zonele rurale,
-            adaptându-ne la specificul fiecărui teren și la cerințele urbanistice locale. Zonele în care activăm includ Timișoara, Arad, Oradea și localitățile limitrofe.
+            Construim o gamă variată de locuințe: case cu un nivel, case cu etaj, case cu mansardă și vile. Lucrăm atât în mediul urban, cât și în zonele rurale,
+            adaptându-ne la specificul fiecărui teren și la cerințele urbanistice locale.{/*  Zonele în care activăm includ Timișoara, Arad, Oradea și localitățile limitrofe. */}
           </p>
         </Reveal>
         <Reveal delay={2}>
@@ -253,9 +253,11 @@ export default function ConstructiiCasePage() {
       <section className='const_section3'>
         <div className='contact_content'>
           <Reveal width='fit-content'>
-            <div style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly' }}>
-              <p className="subtitle">AVANTAJE</p>
-              <h2>Beneficiile <span>Colaborării</span></h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              <div>
+                <p className="subtitle">AVANTAJE</p>
+                <h2>Beneficiile <span>Colaborării</span></h2>
+              </div>
               <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
                 {
                   avantaje.map((v, i) => <li style={{ display: 'flex', alignItems: 'center', gap: 10 }} key={i}><IoMdCheckmarkCircleOutline size={20} color='var(--accent-color)' />{v}</li>)

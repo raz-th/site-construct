@@ -5,14 +5,15 @@ import React, { useState } from 'react';
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa6";
 
-const Card = ({ intrebare, raspuns, eDeschis, onClick }) => {
+const Card = ({ intrebare, raspuns, eDeschis, onClick, i }) => {
     return (
-        <button className='card_intrebare' onClick={() => onClick()}>
-            <Reveal>
+        <Reveal delay={i*.7}>
+            <button className='card_intrebare' onClick={() => onClick()}>
+                {/* <Reveal> */}
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                     <div style={{ display: "flex", alignItems: 'center', gap: "1rem" }}>
                         <FaRegQuestionCircle size={25} color='var(--accent-color)' />
-                        <h2 style={{textAlign: 'start'}}>{intrebare}</h2>
+                        <h1 style={{ textAlign: 'start', fontSize: 20 }}>{intrebare}</h1>
                     </div>
                     <FaAngleDown style={{ transition: '.3s ease', transform: eDeschis ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                 </div>
@@ -25,8 +26,9 @@ const Card = ({ intrebare, raspuns, eDeschis, onClick }) => {
                         <p style={{ paddingTop: '1rem', textAlign: 'start', color: "#707070", fontSize: 17 }}>{raspuns}</p>
                     </div>
                 </div>
-            </Reveal>
-        </button>
+                {/* </Reveal> */}
+            </button>
+        </Reveal>
     )
 }
 
@@ -34,7 +36,7 @@ const IntrebariUnic = ({ intrebari = [] }) => {
     const [iiDeschis, setiiDeschis] = useState(null);
     return (
         <div className='const_section_intrebari'>
-            {intrebari.map((v, i) => <Card intrebare={v.question} raspuns={v.answer} key={i} eDeschis={iiDeschis === i} onClick={() => setiiDeschis((e) => e === i ? null : i)} />)}
+            {intrebari.map((v, i) => <Card intrebare={v.question} raspuns={v.answer} key={i} i={i} eDeschis={iiDeschis === i} onClick={() => setiiDeschis((e) => e === i ? null : i)} />)}
         </div>
     );
 }

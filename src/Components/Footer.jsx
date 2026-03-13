@@ -33,9 +33,9 @@ const Footer = () => {
                     <h4>Servicii</h4>
                     <ul>
                         {/* <li><a href="#">Case Unifamiliale</a></li> */}
-                        <li><a href="/#servicii">Vile de Lux</a></li>
-                        <li><a href="/#servicii">Case Moderne</a></li>
-                        <li><a href="/#servicii">Proiectare Arhitecturală</a></li>
+                        <li><a href="/constructii-case">Constructii Case</a></li>
+                        <li><a href="/case-la-rosu">Case la Rosu</a></li>
+                        <li><a href="/case-la-cheie">Case la Cheie</a></li>
                     </ul>
                 </div>
 
@@ -43,9 +43,9 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Companie</h4>
                     <ul>
-                        <li><a href="#despre_noi">Despre Noi</a></li>
-                        <li><a href="#proiecte">Proiecte</a></li>
-                        <li><a href="#recenzii">Recenzii</a></li>
+                        <li><a href="/#despre_noi">Despre Noi</a></li>
+                        <li><a href="/#proiecte">Proiecte</a></li>
+                        <li><a href="/#recenzii">Recenzii</a></li>
                         {/* <li><a href="#">Cariere</a></li>
                         <li><a href="#">Blog</a></li> */}
                     </ul>

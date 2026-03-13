@@ -3,6 +3,20 @@
   min-height: 100vh;
 }
 
+.inapoi_hero {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #888;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+
+.inapoi_hero:hover {
+  color: var(--accent-color);
+}
+
 
 
 .const_hero_fade {
@@ -312,7 +326,7 @@
 
 
 
-.card {
+.card_const_case {
   background-color: #fff;
   padding: 2rem 4rem;
   border-radius: 15px;
@@ -323,7 +337,7 @@
   gap: 1rem;
 }
 
-.card a {
+.card_const_case a {
   color: var(--accent-color);
   font-weight: 600;
   text-decoration: none;
@@ -342,7 +356,7 @@
   color: #000;
 }
 
-.card h1 {
+.card_const_case h1 {
   color: var(--surface-color);
   transition: color 0.2s;
 }
@@ -464,12 +478,15 @@
   .const_section3 {
     padding: 4rem 1rem;
   }
-  .const_section2{
+
+  .const_section2 {
     padding: 4rem 1rem;
   }
-  .const_section_grid3{
+
+  .const_section_grid3 {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .const_hero_fade {
     padding: 3rem 1rem;
     padding-top: 6rem;

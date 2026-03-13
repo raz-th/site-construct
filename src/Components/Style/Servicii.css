@@ -67,17 +67,30 @@
     overflow: hidden;
 }
 
+.servicii .card a {
+  color: var(--accent-color);
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .servicii .card_content {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    justify-content: space-between;
+    /* background: red; */
+    height: 100%;
     padding: 1rem 2rem;
+    padding-bottom: 2rem;
 }
 
 .servicii .card img{
     aspect-ratio: 1/1;
-    /* object-fit: cover; */
-    object-position: 0 0;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .servicii .card:hover {

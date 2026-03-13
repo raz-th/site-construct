@@ -1,37 +1,58 @@
-import { GoHome, GoPencil } from "react-icons/go";
+import { GoHome } from "react-icons/go";
 // import { LuRuler, LuWrench } from "react-icons/lu";
 import "./Style/Servicii.css"
 import { Reveal } from './Reveal';
+import { FaArrowRight } from 'react-icons/fa';
+// import { useRouter } from "next/router";
 
 
 const dummyImg = "/assets/dummy.png"
 
 
-const Card = ({ title, description, Icon, i, image }) => {
+const Card = ({ title, description, Icon, i, image, href }) => {
+    // const nav = useRouter();
     return (
         <Reveal>
-            <div className='card'>
-                <img  src={image||dummyImg.src} alt=""/>
+            <div className='card' >
+                <img src={image || dummyImg.src} alt="" />
                 <div className='card_content'>
-                    <div className='card-icon'>
-                        <Icon size={24} />
+                    <div style={{display: "flex", flexDirection: "column", gap: "1.2rem"}}>
+                        <div className='card-icon'>
+                            <Icon size={24} />
+                        </div>
+                        <h3>{title}</h3>
+                        <p style={{marginBottom: 20}}>{description}</p>
                     </div>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
+                    <a href={href}>Află mai multe <FaArrowRight /></a>
                 </div>
+
             </div>
         </Reveal>
     )
 }
 
 const servicesData = [
-    // { title: "Case Unifamiliale", Icon: GoHome, description: "Construcții rezidențiale personalizate, de la proiect la predare la cheie. Case moderne adaptate nevoilor familiei tale." },
-    { title: "Vile de Lux", image: "/assets/IMG-20260213-WA0003.jpg", Icon: GoHome, description: "Vile premium cu finisaje de înaltă calitate, piscine, grădini peisagistice și toate facilitățile moderne." },
-    { title: "Case Moderne", image: "/assets/IMG-20260213-WA0001.jpg", Icon: GoHome, description: "Locuințe eficiente și elegante, optimizate pentru confort zilnic, bugete echilibrate și funcționalitate pe termen lung." },
-    { title: "Proiectare Arhitecturală", image: "/assets/IMG-2.jpg", Icon: GoPencil, description: "Servicii complete de proiectare cu arhitecți premiați. Transformăm ideile tale în planuri concrete." },
-    // { title: "Renovări Complete", Icon: LuWrench, description: "Modernizare și renovare completă a locuințelor existente cu materiale premium și tehnologii moderne." },
-    // { title: "Consultanță Tehnică", Icon: LuRuler, description: "Expertiză tehnică pentru proiecte de construcții. Evaluări, studii de fezabilitate și supervizare." },
-    // { title: "Garanție Extinsă", Icon: GoShieldCheck, description: "Oferim garanție de până la 10 ani pentru lucrările noastre, asigurând liniștea ta pe termen lung." },
+    {
+        title: "Case Moderne",
+        image: "/assets/IMG-1.jpg",
+        Icon: GoHome,
+        description: "Vile premium cu finisaje de înaltă calitate, piscine, grădini peisagistice și toate facilitățile moderne.",
+        href: "/constructii-case"
+    },
+    {
+        title: "Case la Cheie",
+        image: "/assets/IMG-2.jpg",
+        Icon: GoHome,
+        description: "Locuințe eficiente și elegante, optimizate pentru confort zilnic, bugete echilibrate și funcționalitate pe termen lung.",
+        href: "/case-la-cheie"
+    },
+    {
+        title: "Case la Roșu",
+        image: "/assets/IMG-3.jpg",
+        Icon: GoHome,
+        description: "Construim structura completă a casei – fundație, zidărie și acoperiș – pregătită pentru finisajele dorite de tine. O soluție flexibilă și eficientă pentru a-ți personaliza locuința după propriul stil și buget.",
+        href: "/case-la-rosu"
+    },
 ];
 
 const Servicii = () => {

@@ -1,0 +1,588 @@
+.serviciu-page {
+    background-color: #f8f5f0;
+    min-height: 100vh;
+}
+
+.inapoi_hero {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #888;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.inapoi_hero:hover {
+    color: var(--accent-color);
+}
+
+
+
+.caselarosu_hero_fade {
+    position: relative;
+    inset: 0;
+    background-image: linear-gradient(#1a1e24de), url("/assets/hero.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateZ(0);
+    height: fit-content;
+    z-index: 10;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5rem;
+    padding-top: 10rem;
+
+}
+
+.caselarosu_hero_fade h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 100;
+    color: #fff;
+    font-size: clamp(1.7rem, 5vw, 4rem);
+    font-family: Playfair Display, serif;
+}
+
+.caselarosu_hero_fade h1 span {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.caselarosu_hero_content {
+    max-width: 800px;
+    z-index: 20;
+    pointer-events: auto;
+    /* Re-enable clicks for buttons */
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(180, 140, 90, 0.3);
+    color: var(--accent-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.caselarosu_hero_description {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    /* max-width: 50%; */
+}
+
+.caselarosu_hero_actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 2.5rem;
+}
+
+.btn-primary {
+    background: var(--gradient-gold);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--surface-color);
+}
+
+.caselarosu_section1 {
+    padding: 8rem 4rem;
+    background-color: #fff;
+}
+
+.caselarosu_section3 {
+    padding: 8rem 4rem;
+    background-color: var(--surface-color);
+    color: #fff;
+}
+
+.contact_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    align-items: stretch;
+    height: 100%;
+}
+
+.contact_content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.contact_content h2 span {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.caselarosu_section1 .introDes {
+    color: var(--surface-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+    margin-bottom: 1.7rem;
+}
+
+.caselarosu_section2 {
+    padding: 8rem 4rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    /* gap: 4rem; */
+    align-items: center;
+}
+
+.caselarosu_section4{
+      padding: 8rem 4rem;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  /* gap: 4rem; */
+  align-items: center;
+}
+
+.caselarosu_sectionheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    /* background-color: red; */
+}
+
+.caselarosu_sectionheader-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitle {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.caselarosu_sectionheader-text h2 span:not(.important) {
+    color: var(--accent-color);
+    /* Or use your gold gradient */
+}
+
+.subtitle_important {
+    color: var(--alert-color);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.important {
+    color: var(--alert-color);
+}
+
+.caselarosu_sectionheader-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #1a1e24;
+    margin-bottom: 1rem;
+}
+
+.caselarosu_sectionheader-text .description {
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+
+
+.caselarosu_section_grid {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
+
+.caselarosu_section_grid2 {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    align-items: start;
+    position: relative;
+}
+
+/* linia orizontală între carduri */
+.caselarosu_section_grid2::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    /* jumătatea iconului (60px / 2) */
+    left: calc(100% / 8);
+    /* pornește din centrul primului card */
+    right: calc(100% / 8);
+    /* se termină în centrul ultimului card */
+    height: 1px;
+    background-color: #d0c9be;
+    z-index: 0;
+}
+
+
+
+.caselarosu_section_grid3 {
+    background-color: #fdf0ee;
+    border: 1px solid var(--alert-color);
+    border-radius: 25px;
+    padding: 2rem 2.5rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.caselarosu_section_grid3 li {
+    display: flex;
+    /* align-items: center; */
+    gap: 12px;
+    font-size: 20px;
+    color: #2c2c2c;
+}
+
+.caselarosu_section_grid3 li p {
+    margin: 0;
+}
+
+.caselarosu_section_grid2 h1 {
+    font-size: 150%
+}
+
+
+@media (max-width: 900px) {
+    .caselarosu_section_grid2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .caselarosu_section_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .caselarosu_section_grid2>* {
+        grid-column: span 1 !important;
+    }
+
+    .contact_content {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .caselarosu_section_grid2 {
+        gap: 2rem;
+    }
+
+    .caselarosu_section_grid2::before {
+        display: none;
+    }
+}
+
+.caselarosu_cardEtapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.caselarosu_cardEtapa_i {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    /* padding: 2rem; */
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f0a830, #d4801a);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.25rem;
+    border: 5px solid #fff;
+}
+
+
+.card_caselarosu_case {
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.5s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.card_caselarosu_case_pret {
+    background-color: #fff;
+    padding: 2rem 4rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.5s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.card_caselarosu_case_pret h1 {
+    background-image: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+}
+
+.card_caselarosu_case a {
+    color: var(--accent-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.caselarosu_section_grid2 .card:hover h1 {
+    color: #000;
+}
+
+.card_caselarosu_case h1 {
+    color: var(--surface-color);
+    transition: color 0.2s;
+    font-size: 1.5rem;
+}
+
+.card:hover h1 {
+    color: var(--accent-color);
+}
+
+.card:hover a {
+    gap: 13px;
+}
+
+.contact-form-container {
+    background: #25282d;
+    padding: 3rem;
+    border-radius: 20px;
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); */
+    width: fit-content;
+}
+
+.contact-form-container h3 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #888;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #43464a;
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: #2f3237;
+    color: #fff;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn-submit {
+    background: var(--gradient-gold);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.const_section_intrebari {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card_intrebare {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #1a1e2448;
+  transition: .2s ease;
+  width: 100%;
+}
+
+
+
+@media (max-width: 600px) {
+    .caselarosu_section1 {
+        padding: 4rem 1rem;
+    }
+
+    .caselarosu_section1 p {
+        width: 100%;
+    }
+
+    .caselarosu_section3 {
+        padding: 4rem 1rem;
+    }
+
+    .caselarosu_section2 {
+        padding: 4rem 1rem;
+    }
+    .caselarosu_section4 {
+        padding: 4rem 1rem;
+    }
+
+    .caselarosu_section_grid3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .caselarosu_hero_fade {
+        padding: 3rem 1rem;
+        padding-top: 6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-form-container h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .btn-submit {
+        padding: 14px;
+    }
+}

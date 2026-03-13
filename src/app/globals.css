@@ -24,6 +24,7 @@ a {
 body {
   --bg-color: #f3f0ed;
   --text-color: #333333;
+  --alert-color: #ff4d4f;
   --muted: #b0b0b0;
   --surface-color: #1a1e24;
   --accent-color: hsl(38 75% 55%);
