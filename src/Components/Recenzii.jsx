@@ -92,7 +92,7 @@ const Recenzii = () => {
                     <Reveal>
                         <div className="header-text">
                             <p className="subtitle">RECENZII</p>
-                            <h2>Ce spun <span>Clienții</span> Noștri</h2>
+                            <h2>Ce spun <span>clienții</span> noștri</h2>
                             <p className="description">
                                 Satisfacția clienților noștri este cea mai mare recompensă. Iată câteva din experiențele lor.
                             </p>

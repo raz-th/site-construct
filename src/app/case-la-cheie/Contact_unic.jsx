@@ -24,7 +24,7 @@ const ContactUnic = () => {
     return (
         <Reveal width='fit-content'>
             <div className='contact-form-container' id="contact">
-                <h3>Solicită o ofertă</h3>
+                <h3>Solicită o ofertă pentru o casă la cheie</h3>
                 <form className='contact-form' onSubmit={handleSubmit}>
                     <div className='form-row'>
                         <div className='form-group'>
@@ -60,20 +60,6 @@ const ContactUnic = () => {
                             onChange={handleChange}
                             required
                         />
-                    </div>
-                    <div className='form-group'>
-                        <label>Tip Proiect</label>
-                        <select
-                            name="projectType"
-                            value={formData.projectType}
-                            onChange={handleChange}
-                            required
-                        >
-                            <option value="">Selectează tipul proiectului</option>
-                            {tipuri_casa.map((v, i) => (
-                                <option key={i} value={v}>{v}</option>
-                            ))}
-                        </select>
                     </div>
                     <div className='form-group'>
                         <label>Detalii Proiect</label>

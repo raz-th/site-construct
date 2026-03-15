@@ -50,12 +50,12 @@ const CardEtapa = ({ title = " ", continut = " ", i }) => {
 
 const servicii = [
   {
-    title: "Construcții Case La Roșu",
+    title: "Construcții case La roșu",
     continut: "Structura completă a casei - fundație, pereți, planșee și acoperiș - la cel mai bun raport calitate-preț.",
     link: "/case-la-rosu"
   },
   {
-    title: "Construcții Case la Cheie",
+    title: "Construcții case la cheie",
     continut: "Casă complet finisată și gata de locuit, de la fundație până la mobilier, într-un singur contract.",
     link: "/case-la-cheie"
   }
@@ -63,34 +63,34 @@ const servicii = [
 
 const dece = [
   {
-    title: `Experiență de ${parseInt((an_curent - an_inceput) / 10)}0+ Ani`,
+    title: `Experiență de ${parseInt((an_curent - an_inceput) / 10)}0+ ani`,
     continut: "Peste 40 de proiecte finalizate cu succes. Cunoaștem fiecare etapă a construcției și anticipăm provocările înainte să apară.",
   },
   {
-    title: "Echipă Calificată",
+    title: "Echipă calificată",
     continut: "Meșterii noștri sunt certificați și au experiență în construcții rezidențiale moderne. Fiecare specialist lucrează în domeniul său de expertiză.",
   },
   {
-    title: "Materiale de Calitate",
+    title: "Materiale de calitate",
     continut: "Colaborăm doar cu furnizori de materiale de construcții certificate. Folosim beton de înaltă rezistență, cărămidă premium și izolații de ultimă generație.",
   },
   {
-    title: "Respectarea Termenelor",
+    title: "Respectarea termenelor",
     continut: "Planificăm fiecare etapă cu precizie și respectăm termenele asumate. Primiți rapoarte săptămânale de progres.",
   },
   {
-    title: "Transparență Totală",
+    title: "Transparență totală",
     continut: "Costuri clare de la început, fără surprize. Aveți acces permanent la șantier și comunicare constantă cu managerul de proiect.",
   },
 ]
 
 const etape = [
   {
-    title: 'Consultanță & Proiect',
-    des: 'Analiză teren, discutarea cerințelor, proiect arhitectural și obținerea autorizațiilor.'
+    title: 'Consultanță & analiză proiect',
+    des: 'Discutăm cerințele clientului și analizăm proiectul furnizat pentru a planifica corect execuția lucrărilor.'
   },
   {
-    title: 'Pregătire Teren',
+    title: 'Pregătire teren',
     des: 'Decopertare, săpătură, nivelare și pregătirea amplasamentului pentru turnarea fundației.'
   },
   {
@@ -98,7 +98,7 @@ const etape = [
     des: 'Armare, cofrare și turnare fundație din beton armat C25/30, conform studiului geotehnic.'
   },
   {
-    title: 'Structura & Zidăria',
+    title: 'Structura & zidăria',
     des: 'Ridicare pereți, stâlpi, grinzi, planșee - structura de rezistență completă a casei.'
   },
   {
@@ -114,7 +114,7 @@ const etape = [
     des: 'Tencuieli, pardoseli, gresie, faianță, vopsitorii decorative și tâmplărie interioară.'
   },
   {
-    title: 'Predarea Cheilor',
+    title: 'Predarea cheilor',
     des: 'Verificări finale, recepție, curățenie profesională și predarea casei finalizate.'
   }
 ]
@@ -166,7 +166,7 @@ export default function ConstructiiCasePage() {
           <Reveal>
             <div className='const_hero_actions'>
               <a href='#contact' className='btn-primary'>
-                Solicită Ofertă Gratuită <FaArrowRight />
+                Solicită ofertă gratuită <FaArrowRight />
               </a>
             </div>
           </Reveal>
@@ -198,7 +198,7 @@ export default function ConstructiiCasePage() {
           <Reveal>
             <div className="const_sectionheader-text">
               <p className="subtitle">SERVICII</p>
-              <h2>Serviciile <span>Noastre</span></h2>
+              <h2>Serviciile <span>noastre</span></h2>
             </div>
           </Reveal>
         </div>
@@ -217,7 +217,7 @@ export default function ConstructiiCasePage() {
           <Reveal>
             <div className="const_sectionheader-text">
               <p className="subtitle">De Ce Noi</p>
-              <h2>De Ce Să Alegi Firma Noastră</h2>
+              <h2>De ce să alegi firma noastră</h2>
             </div>
           </Reveal>
         </div>
@@ -236,7 +236,7 @@ export default function ConstructiiCasePage() {
           <Reveal>
             <div className="const_sectionheader-text">
               <p className="subtitle">Etapele Construcției</p>
-              <h2>Etapele Construcției unei Case</h2>
+              <h2>Etapele construcției unei case</h2>
             </div>
           </Reveal>
         </div>
@@ -256,7 +256,7 @@ export default function ConstructiiCasePage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               <div>
                 <p className="subtitle">AVANTAJE</p>
-                <h2>Beneficiile <span>Colaborării</span></h2>
+                <h2>Beneficiile <span>colaborării</span></h2>
               </div>
               <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
                 {
@@ -272,8 +272,8 @@ export default function ConstructiiCasePage() {
         <div className="const_sectionheader">
           <Reveal>
             <div className="const_sectionheader-text">
-              <p className="subtitle">Întrebări Frecvente</p>
-              <h2>Ai <span>Întrebări?</span></h2>
+              <p className="subtitle">Întrebări frecvente</p>
+              <h2>Ai <span>întrebări?</span></h2>
             </div>
           </Reveal>
         </div>

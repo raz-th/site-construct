@@ -2,7 +2,7 @@ import { Reveal } from '@/Components/Reveal';
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoMdCloseCircleOutline, IoMdCheckmarkCircleOutline } from "react-icons/io";
-import "./case-la-rosu.css"
+import "./case-la-cheie.css"
 import ContactUnic from './Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
 
@@ -37,79 +37,67 @@ const CardEtapa = ({ title = " ", continut = " ", i }) => {
 }
 
 const intrebari_frec = [
-    { question: "Cât durează construcția unei case la roșu?", answer: "În medie, o casă la roșu se construiește în 3–5 luni, în funcție de suprafață, complexitate și condițiile meteorologice." },
-    { question: "Ce materiale sunt folosite?", answer: "Folosim beton C25/30 pentru fundație și structură, BCA de 30cm sau cărămidă pentru zidărie, lemn tratat pentru șarpantă și învelitoare la alegerea clientului." },
-    { question: "Pot continua cu altă firmă finisajele?", answer: "Da, absolut. Casa la roșu este o structură completă pe care orice firmă specializată o poate finisa. Oferim cartea construcției cu toate detaliile tehnice necesare." },
+    { question: "Cât durează construcția unei case la cheie?", answer: "Durata medie este de 6–12 luni, în funcție de suprafața construită, complexitatea proiectului și condițiile meteo. La semnarea contractului primiți un calendar detaliat." },
+    { question: "Pot personaliza finisajele?", answer: "Da, absolut! Alegeți finisajele din showroom-ul partenerului nostru: pardoseli, gresie, faianță, vopsele, uși, obiecte sanitare. Designerul nostru vă ajută să creați combinația perfectă." },
     { question: "Ce garanție oferă firma?", answer: "În prezent nu oferim garanție pentru lucrări. Execuția construcției se realizează conform proiectului tehnic și cerințelor stabilite împreună cu clientul." },
+    { question: "Prețul include amenajarea curții?", answer: "Da, în pachetul standard sunt incluse alei, terasă, gazon și iluminat exterior. Amenajări peisagistice complexe se pot adăuga la un cost suplimentar." },
+    { question: "Pot vizita șantierul în timpul construcției?", answer: "Desigur. Aveți acces permanent la șantier și primiți rapoarte foto săptămânale cu stadiul lucrărilor." },
 ]
 
 
 const ce_include = [
     {
-        title: "Fundația Completă",
-        continut: "Fundație din beton armat C25/30 dimensionată conform studiului geotehnic, cu hidroizolație și drenaj perimetral."
+        title: "Fundație și structură",
+        continut: "Fundație din beton armat, structură completă de rezistență, zidărie și acoperiș — baza solidă a locuinței."
     },
     {
-        title: "Structura de Rezistență",
-        continut: "Stâlpi, grinzi și centuri din beton armat, dimensionate de inginer structurist pentru siguranță maximă."
+        title: "Instalații complete",
+        continut: "Instalații electrice, sanitare, de încălzire și ventilație, toate executate conform normativelor și certificate."
     },
     {
-        title: "Zidăria Exterioară",
-        continut: "Pereți din BCA de 30cm sau cărămidă, cu armare în centuri și buiandrugi la golurile de ferestre și uși."
+        title: "Tencuieli și glet",
+        continut: "Tencuieli interioare și exterioare, glet și amorsaj, pregătite pentru finisajul final ales de dumneavoastră."
     },
     {
-        title: "Planșee Beton Armat",
-        continut: "Plăci peste parter/etaj din beton armat turnat monolit sau prefabricat, conform proiectului structural."
+        title: "Pardoseli complete",
+        continut: "Gresie, parchet laminat sau stratificat, montate profesionist în toate încăperile locuinței."
     },
     {
-        title: "Acoperișul Complet",
-        continut: "Șarpantă din lemn tratat, învelitoare la alegere (țiglă, tablă), hidroizolație, jgheaburi și burlane."
+        title: "Băi complete",
+        continut: "Gresie, faianță, obiecte sanitare, robinete și accesorii — băi complet funcționale și estetice."
     },
     {
-        title: "Scară Interioară",
-        continut: "Scară din beton armat pentru casele cu etaj sau mansardă, conformă cu proiectul de arhitectură."
+        title: "Uși și tâmplărie",
+        continut: "Uși interioare, uși exterioare, ferestre cu geam termopan și praguri — totul montat și reglat."
     }
 ]
 
 const avantaje = [
     // "Proiect arhitectural inclus în preț",
-    "Cost inițial mai mic - plătești doar structura",
-    "Flexibilitate totală la alegerea finisajelor",
-    "Control asupra bugetului - finisezi în ritmul tău",
-    "Poți continua cu altă firmă pentru finisaje",
-    "Beton de înaltă rezistență (C25/30 minim)",
-    "Fier beton certificat și trasabil",
-    "Hidroizolație fundație inclusă",
+    "Casă gata de locuit — vă mutați imediat",
+    "Un singur interlocutor pentru tot proiectul",
+    "Preț fix stabilit de la început, fără costuri ascunse",
+    "Cost total predictibil — buget controlat",
+    "Management complet al proiectului",
 ]
 
-const ce_nu_include = [
-    "Instalații electrice",
-    "Instalații sanitare",
-    "Instalații de încălzire",
-    "Tencuieli interioare și exterioare",
-    "Glet și vopsitorii",
-    "Pardoseli (gresie, parchet)",
-    "Gresie și faianță în băi și bucătărie",
-    "Uși interioare",
-    "Amenajări exterioare"
-];
 
 const etape = [
     {
-        title: 'Fundația',
-        continut: 'Săpătură, armare, cofrare și turnare fundație cu beton C25/30 și hidroizolație.',
+        title: 'Analiza proiectului & planificare',
+        continut: 'Analizăm proiectul furnizat de client, stabilim etapele de lucru, materialele necesare și organizăm execuția construcției pentru o desfășurare eficientă a lucrărilor.',
     },
     {
-        title: 'Structura',
-        continut: 'Stâlpi, grinzi, centuri din beton armat - scheletul de rezistență al casei.',
+        title: 'Construcția structurii',
+        continut: 'Fundație, pereți, planșee, acoperiș — structura completă de rezistență a casei.',
     },
     {
-        title: 'Zidăria',
-        continut: 'Ridicare pereți exteriori și interiori din BCA sau cărămidă, cu armări în centuri.',
+        title: 'Instalațiile',
+        continut: 'Trasee electrice, sanitare, termice și de ventilație, testate și certificate.',
     },
     {
-        title: 'Acoperișul',
-        continut: 'Montare șarpantă, învelitoare, astereală, hidroizolație și sistem pluvial.',
+        title: 'Finisajele',
+        continut: 'Tencuieli, pardoseli, zugrăveli, montaj uși, obiecte sanitare și echipamente.',
     }
 ]
 
@@ -127,13 +115,13 @@ const Page = () => {
                     <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
                     <Reveal>
                         <h1>
-                            Construcții Case la Roșu
+                            Construcții Case la Cheie
                         </h1>
                     </Reveal>
 
                     <Reveal>
                         <p className='caselarosu_hero_description'>
-                            Construcția la roșu reprezintă structura completă a casei - de la fundație până la acoperiș. Este soluția ideală pentru cei care doresc o fundație solidă și flexibilitate totală la finisaje.
+                            O casă la cheie este o locuință complet finisată și gata de locuit. De la fundație la mobilier, de la instalații la grădină — primiți cheile și vă mutați fără niciun efort suplimentar.
                         </p>
                     </Reveal>
 
@@ -149,12 +137,12 @@ const Page = () => {
             <section className='caselarosu_section1'>
                 <Reveal delay={0}>
                     <p className='introDes'>
-                        O casă la roșu reprezintă structura de rezistență a locuinței, complet finalizată și pregătită pentru etapa de finisare. Aceasta include fundația, pereții structurali, planșeele, acoperișul și, în funcție de contract, tâmplăria exterioară.
+                       Casa la cheie reprezintă cea mai comodă soluție pentru cei care doresc o locuință nouă fără a se implica în gestionarea mai multor contracte și furnizori. Noi ne ocupăm de absolut tot: proiect, autorizații, construcție, instalații, finisaje și amenajare exterioară.
                     </p>
                 </Reveal>
                 <Reveal delay={1}>
                     <p className='introDes'>
-                        Alegerea construcției la roșu este o opțiune populară în România deoarece oferă un echilibru excelent între cost și control. Puteți finaliza finisajele în ritmul propriu, cu bugetul disponibil, sau puteți apela la altă firmă pentru lucrările interioare.
+                        Cu un preț fix stabilit de la început și un singur interlocutor pe tot parcursul proiectului, aveți certitudinea că bugetul și termenele vor fi respectate. Vă implicați doar în alegerea finisajelor din showroom-ul nostru partener.
                     </p>
                 </Reveal>
             </section>
@@ -163,7 +151,7 @@ const Page = () => {
                     <Reveal>
                         <div className="caselarosu_sectionheader-text">
                             <p className="subtitle">Ce Include</p>
-                            <h2>Ce include construcția la roșu</h2>
+                            <h2>Ce include o casă la cheie</h2>
                         </div>
                     </Reveal>
                 </div>
@@ -177,32 +165,13 @@ const Page = () => {
                     }
                 </div>
             </section>
-            <section className='caselarosu_section1'>
-                <div className="caselarosu_sectionheader">
-                    <Reveal>
-                        <div className="caselarosu_sectionheader-text">
-                            <p className="subtitle_important">Important</p>
-                            <h2>Ce <span className='important'>NU</span> include</h2>
-                        </div>
-                    </Reveal>
-                </div>
-                <Reveal>
-                    <div style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <ol className='caselarosu_section_grid3'>
-                            {
-                                ce_nu_include.map((v, i) => (<li key={i}><IoMdCloseCircleOutline color='var(--alert-color)' size={30} /><p>{v}</p></li>))
-                            }
-                        </ol>
-                    </div>
-                </Reveal>
-
-            </section>
+        
             <section className='caselarosu_section1'>
                 <div className="caselarosu_sectionheader">
                     <Reveal>
                         <div className="caselarosu_sectionheader-text">
                             <p className="subtitle">Etapele Construcției</p>
-                            <h2>Cum construim casa la roșu</h2>
+                            <h2>Cum construim casa la cheie</h2>
                         </div>
                     </Reveal>
                 </div>
@@ -235,7 +204,7 @@ const Page = () => {
                 <Reveal width='fit-content' >
                     <div className='card_caselarosu_case_pret'>
                         <h1>
-                            300 – 450 €/mp
+                            700 – 1200 €/mp
                         </h1>
                         <p>
                             *Prețul variază în funcție de complexitatea proiectului, materiale și suprafață.
@@ -249,7 +218,7 @@ const Page = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             <div>
                                 <p className="subtitle">AVANTAJE</p>
-                                <h2>Avantajele construcției la roșu</h2>
+                                <h2>Avantajele unei case la cheie</h2>
                             </div>
                             <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
                                 {

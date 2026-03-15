@@ -74,7 +74,7 @@ const Nav = () => {
                     </nav>
                     <div className="nav-section">
                         <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                        <a className='btn-primary' href='/#contact'>Solicită Ofertă</a>
+                        <a className='btn-primary' href='/#contact'>Solicită ofertă</a>
                     </div>
                     <div className="nav-section">
                         {showMobileNav ? <IoClose size={35} onClick={() => setShowMobileNav((v) => !v)} /> : <IoMenu size={35} onClick={() => setShowMobileNav((v) => !v)} />}

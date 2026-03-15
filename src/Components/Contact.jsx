@@ -32,7 +32,7 @@ const Contact = () => {
                 <div className='contact-info'>
                     <Reveal>
                         <p className='subtitle'>CONTACT</p>
-                        <h2>Hai să Construim <span>Împreună</span></h2>
+                        <h2>Hai să construim <span>împreună</span></h2>
                         <p className='description'>
                             Contactează-ne pentru o consultanță. Suntem aici să răspundem la
                             toate întrebările tale și să începem proiectul casei tale de vis.

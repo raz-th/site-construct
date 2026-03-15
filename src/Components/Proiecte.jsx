@@ -80,7 +80,7 @@ const Proiecte = () => {
                     <Reveal>
                         <div className="header-text">
                             <p className="subtitle">PORTOFOLIU</p>
-                            <h2>Lucrări <span>Realizate</span></h2>
+                            <h2>Lucrări <span>realizate</span></h2>
                             <p className="description">
                                 O selecție din proiectele noastre recente - de la case moderne la vile premium și lucrări aflate în execuție.
                             </p>
@@ -88,7 +88,7 @@ const Proiecte = () => {
                     </Reveal>
                     <Reveal width='fit-content'>
                         <button className="btn-view-all" onClick={() => nav.push("/galerie")}>
-                            Vezi Mai Multe <span><LuArrowUpRight /></span>
+                            Vezi mai multe <span><LuArrowUpRight /></span>
                         </button>
                     </Reveal>
                 </div>

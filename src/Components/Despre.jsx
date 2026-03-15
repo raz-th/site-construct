@@ -21,7 +21,7 @@ const Despre = () => {
                 <div className='despre-content'>
                     <Reveal>
                         <p className='subtitle'>DESPRE NOI</p>
-                        <h2>De Ce Să Alegi <span>{nume_complet.split(" ")[0]}</span>?</h2>
+                        <h2>De ce să alegi <span>{nume_complet.split(" ")[0]}</span>?</h2>
                         <p className='description'>
                             Cu peste un deceniu de experiență în industria construcțiilor, am livrat
                             proiecte excepționale pentru familii din România. Ne mândrim cu

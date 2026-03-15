@@ -33,21 +33,21 @@ const Card = ({ title, description, Icon, i, image, href }) => {
 
 const servicesData = [
     {
-        title: "Case Moderne",
+        title: "Case moderne",
         image: "/assets/IMG-1.jpg",
         Icon: GoHome,
         description: "Vile premium cu finisaje de înaltă calitate, piscine, grădini peisagistice și toate facilitățile moderne.",
         href: "/constructii-case"
     },
     {
-        title: "Case la Cheie",
+        title: "Case la cheie",
         image: "/assets/IMG-2.jpg",
         Icon: GoHome,
         description: "Locuințe eficiente și elegante, optimizate pentru confort zilnic, bugete echilibrate și funcționalitate pe termen lung.",
         href: "/case-la-cheie"
     },
     {
-        title: "Case la Roșu",
+        title: "Case la roșu",
         image: "/assets/IMG-3.jpg",
         Icon: GoHome,
         description: "Construim structura completă a casei – fundație, zidărie și acoperiș – pregătită pentru finisajele dorite de tine. O soluție flexibilă și eficientă pentru a-ți personaliza locuința după propriul stil și buget.",
@@ -61,7 +61,7 @@ const Servicii = () => {
             <Reveal width='fit-content'>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <p className='subtitle'>SERVICIILE NOASTRE</p>
-                    <h2 className='t'>Soluții Complete de <span>Construcții</span></h2>
+                    <h2 className='t'>Soluții complete de <span>construcții</span></h2>
                     <p className='description'>De la proiectare până la finisaje, oferim servicii complete pentru casa visurilor tale. Lucrăm cu arhitecți premiați și echipe experimentate pentru a livra rezultate premium.</p>
                 </div>
             </Reveal>
