@@ -2,6 +2,7 @@ import React from 'react';
 import { FaInstagram } from "react-icons/fa";
 import "./Style/Footer.css";
 import { an_inceput, nume_complet, logo192 } from '../config/site';
+import Link from 'next/link';
 
 
 const Footer = () => {
@@ -21,10 +22,10 @@ const Footer = () => {
                         Experiență, calitate și profesionalism la cele mai înalte standarde.
                     </p>
                     <div className="social-links">
-                        {/* <a href="/#"><FaFacebookF /></a> */}
-                        <a href="https://www.instagram.com/aurvis_construct/" target="_blank"><FaInstagram /></a>
-                        {/* <a href="/#"><FaLinkedinIn /></a> */}
-                        {/* <a href="#"><FaYoutube /></a> */}
+                        {/* <Link href="/#"><FaFacebookF /></Link> */}
+                        <Link href="https://www.instagram.com/aurvis_construct/" target="_blank"><FaInstagram /></Link> 
+                        {/* <Link href="/#"><FaLinkedinIn /></Link> */}
+                        {/* <Link href="#"><FaYoutube /></Link> */}
                     </div>
                 </div>
 
@@ -32,10 +33,11 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Servicii</h4>
                     <ul>
-                        {/* <li><a href="#">Case Unifamiliale</a></li> */}
-                        <li><a href="/constructii-case">Constructii Case</a></li>
-                        <li><a href="/case-la-rosu">Case la Rosu</a></li>
-                        <li><a href="/case-la-cheie">Case la Cheie</a></li>
+                        {/* <li><Link href="#">Case Unifamiliale</Link> </li> */}
+                        <li><Link href="/constructii-case">Constructii Case</Link> </li>
+                        <li><Link href="/case-la-rosu">Case la Rosu</Link> </li>
+                        <li><Link href="/case-la-cheie">Case la Cheie</Link> </li>
+                        <li><Link href="/cat-costa-constructia-unei-case">Cât Costă o Casă?</Link></li>
                     </ul>
                 </div>
 
@@ -43,11 +45,11 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Companie</h4>
                     <ul>
-                        <li><a href="/#despre_noi">Despre Noi</a></li>
-                        <li><a href="/#proiecte">Proiecte</a></li>
-                        <li><a href="/#recenzii">Recenzii</a></li>
-                        {/* <li><a href="#">Cariere</a></li>
-                        <li><a href="#">Blog</a></li> */}
+                        <li><Link href="/#despre_noi">Despre Noi</Link> </li>
+                        <li><Link href="/#proiecte">Proiecte</Link> </li>
+                        <li><Link href="/#recenzii">Recenzii</Link> </li>
+                        {/* <li><Link href="#">Cariere</Link> </li>
+                        <li><Link href="#">Blog</Link> </li> */}
                     </ul>
                 </div>
 
@@ -55,9 +57,9 @@ const Footer = () => {
                 <div className="footer-links">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/termeni-si-conditii">Termeni și Condiții</a></li>
-                        <li><a href="/politica-confidentialitate">Politica de Confidențialitate</a></li>
-                        <li><a href="/politica-cookies">Cookies</a></li>
+                        <li><Link href="/termeni-si-conditii">Termeni și Condiții</Link> </li>
+                        <li><Link href="/politica-confidentialitate">Politica de Confidențialitate</Link> </li>
+                        <li><Link href="/politica-cookies">Cookies</Link> </li>
                     </ul>
                 </div>
             </div>

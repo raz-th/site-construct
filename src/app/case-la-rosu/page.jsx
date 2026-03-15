@@ -266,7 +266,7 @@ const Page = () => {
                     <Reveal>
                         <div className="caselarosu_sectionheader-text">
                             <p className="subtitle">Întrebări Frecvente</p>
-                            <h2>Ai <span>Întrebări?</span></h2>
+                            <h2>Ai <span>întrebări?</span></h2>
                         </div>
                     </Reveal>
                 </div>
