@@ -3,9 +3,12 @@ import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoMdCloseCircleOutline, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import "./case-la-rosu.css"
-import ContactUnic from './Contact_unic';
+import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
+import { tipuri_casa } from '@/config/site';
+import { metadata as allMetadata } from '@/config/site';
 
+export const metadata = allMetadata["/case-la-rosu"];
 
 const Card = ({ title = " ", continut = " " }) => {
     return (
@@ -258,7 +261,7 @@ const Page = () => {
                             </ol>
                         </div>
                     </Reveal>
-                    <ContactUnic />
+                    <ContactUnic tip_proiect={tipuri_casa[2]}/>
                 </div>
             </section>
             <section className='caselarosu_section4'>

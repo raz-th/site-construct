@@ -179,7 +179,7 @@
 
 .catcosta_section4 {
     padding: 8rem 4rem;
-    background-color: var(--bg-color);
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     /* gap: 4rem; */

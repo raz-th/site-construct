@@ -4,14 +4,11 @@ import { Reveal } from '@/Components/Reveal';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { an_curent, an_inceput } from '@/config/site';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import ContactUnic from './Contact_unic';
+import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from './Intrebari_unic';
+import { metadata as allMetadata } from '@/config/site';
 
-export const metadata = {
-  title: "Construcții Case | AURVIS CONSTRUCT DESIGN",
-  description: "Construim case moderne și vile de lux în București, Ilfov și județul Giurgiu. Servicii complete de construcții case de la fundație până la finisaje.",
-  keywords: "constructii case, constructii case bucuresti, firma constructii case",
-};
+export const metadata = allMetadata["/constructii-case"];
 
 
 const Card = ({ title = " ", continut = " ", link }) => {

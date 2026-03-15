@@ -1,12 +1,13 @@
 'use client';
-
 import { Reveal } from '@/Components/Reveal';
 import { tipuri_casa } from '@/config/site';
-import React, { useState } from 'react';
+import { sendEmail } from '@/sendEmail';
+import React, { useEffect, useState } from 'react';
+import { useNavProv } from '../NavContext';
 
-const ContactUnic = () => {
-    const [formData, setFormData] = useState({ name: "", phone: "", email: "", projectType: "", details: "" })
-
+const ContactUnic = ({ tip_proiect }) => {
+    const [formData, setFormData] = useState({ name: "", phone: "", email: "", projectType: "", details: "", area: "", buget: "" })
+    const { setMessageData } = useNavProv()
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevState) => ({
@@ -18,8 +19,14 @@ const ContactUnic = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form Submitted:', formData);
-        sendEmail(formData).then((s) => console.log(s)).catch((e) => console.error(e));
+        sendEmail(formData).then((s) => {
+            console.log(s);
+            setMessageData({ show: true, message: "Mesajul a fost trimis! Vă vom contacta în maxim 24 de ore.", type: 'success' });
+            setFormData({ name: "", phone: "", email: "", projectType: "", details: "", area: "", buget: "" })
+        }).catch((e) => { console.error(e); setMessageData({ show: true, message: "A apărut o eroare. Vă rugăm să încercați mai târziu sau să ne contactați telefonic sau printr-un mail.", type: 'error' });});
+
     };
+    useEffect(() => { if (tip_proiect) setFormData((e) => ({ ...e, projectType: tip_proiect })) }, [tip_proiect]);
 
     return (
         <Reveal width='fit-content'>
@@ -74,6 +81,35 @@ const ContactUnic = () => {
                                 <option key={i} value={v}>{v}</option>
                             ))}
                         </select>
+                    </div>
+                    <div className='form-row'>
+                        <div className='form-group'>
+                            <label>Suprafață estimată (mp)</label>
+                            <input
+                                type="number"
+                                name="area"
+                                placeholder="ex: 150"
+                                value={formData.area}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className='form-group'>
+                            <label>Buget estimat (€)</label>
+                            <input
+                                type="text"
+                                name="buget"
+                                placeholder="ex: 100.000"
+                                value={formData.buget ? Number(formData.buget.replace(/\./g, '')).toLocaleString('ro-RO') : ''}
+                                onChange={(e) => {
+                                    const raw = e.target.value.replace(/\./g, '');
+                                    if (/^\d*$/.test(raw)) {
+                                        setFormData(prev => ({ ...prev, buget: raw }));
+                                    }
+                                }}
+                                required
+                            />
+                        </div>
                     </div>
                     <div className='form-group'>
                         <label>Detalii Proiect</label>

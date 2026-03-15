@@ -3,9 +3,11 @@ import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { IoMdCloseCircleOutline, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import "./case-la-cheie.css"
-import ContactUnic from './Contact_unic';
+import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
+import { metadata as allMetadata } from '@/config/site';
 
+export const metadata = allMetadata["/case-la-cheie"];
 
 const Card = ({ title = " ", continut = " " }) => {
     return (

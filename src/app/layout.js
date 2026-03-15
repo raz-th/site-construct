@@ -4,6 +4,8 @@ import { NavProvider } from './NavContext';
 import Nav from '@/Components/Nav';
 import Footer from "@/Components/Footer";
 import CookieBanner from "@/Components/CookieBanner";
+import { Success } from "@/Components/Messages";
+
 
 
 export const metadata = {
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
         <NavProvider>
           <Nav />
           <CookieBanner/>
+          <Success/>
           {children}
         </NavProvider>
         <Footer/>

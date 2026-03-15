@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import '../termeni-si-conditii/legal.css';
-
-export const metadata = {
-  title: "Politica de Confidențialitate | AURVIS CONSTRUCT DESIGN",
-  description: "Informare privind prelucrarea datelor cu caracter personal pe site-ul AURVIS CONSTRUCT DESIGN, conform GDPR.",
-};
+import { metadata as allMetadata } from '@/config/site';
+export const metadata = allMetadata["/politica-confidentialitate"];
 
 export default function ConfidentialitiatePage() {
   return (

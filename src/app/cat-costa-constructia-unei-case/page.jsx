@@ -1,14 +1,15 @@
 import { Reveal } from '@/Components/Reveal';
 import React from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { IoMdCloseCircleOutline, IoMdCheckmarkCircleOutline, IoMdTrendingUp } from "react-icons/io";
+import { IoMdCheckmarkCircleOutline, IoMdTrendingUp } from "react-icons/io";
 import { LuRuler, LuHammer } from "react-icons/lu";
 import { FiHome } from "react-icons/fi";
 import "./cat_costa.css"
-import ContactUnic from './Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
 import { an_curent } from '@/config/site';
+import { metadata as allMetadata } from '@/config/site';
 
+export const metadata = allMetadata["/cat-costa-constructia-unei-case"];
 
 const CardServicii = ({ data = servicii[0] }) => {
     return (
@@ -38,7 +39,7 @@ const CardInfluente = ({ data = ce_influenteaza[0] }) => {
         <Reveal width='100%'>
             <div className='card_influenta'>
                 <div className='catcosta_cardEtapa_i'>
-                    <Ic size={25}/>
+                    <Ic size={25} />
                 </div>
                 <div className='card_catcosta_case_continut'>
                     <h1>{data.title}</h1>
@@ -219,8 +220,8 @@ const Page = () => {
                     </div>
                 </Reveal>
             </section>
-            
-         
+
+
             <section className='catcosta_section4'>
                 <div className="catcosta_sectionheader">
                     <Reveal>
@@ -231,6 +232,22 @@ const Page = () => {
                     </Reveal>
                 </div>
                 <IntrebariUnic intrebari={intrebari_frec} />
+            </section>
+            <section className='catcosta_section2'>
+                <div className="catcosta_sectionheader">
+                    <Reveal>
+                        <div className="catcosta_sectionheader-text">
+                            <p className="subtitle">Întrebări Frecvente</p>
+                            <h2>Vrei să afli prețul <span>exact</span>?</h2>
+                        </div>
+                        <p>Solicită o ofertă personalizată gratuită. Analizăm proiectul tău și îți oferim un deviz detaliat în maxim 48 de ore.</p>
+                    </Reveal>
+                </div>
+                <div >
+                    <Reveal>
+                        <a className='btn-primary' href='/contact'>Solicită Ofertă Gratuită <FaArrowRight/></a>
+                    </Reveal>
+                </div>
             </section>
         </div>
     );

@@ -15,6 +15,8 @@ export const sendEmail = async (formData) => {
           <p><strong>Telefon:</strong> ${formData.phone}</p>
           <p><strong>Email:</strong> ${formData.email}</p>
           <p><strong>Tip Proiect:</strong> ${formData.projectType}</p>
+          <p><strong>Suprafață estimată (mp):</strong> ${formData.area}</p>
+          <p><strong>Buget estimată (€):</strong> ${Number(formData.buget.replace(/\./g, '')).toLocaleString('ro-RO')}</p>
           <p><strong>Detalii Proiect:</strong> ${formData.details}</p>
           <hr>
           <p>Acest mesaj a fost trimis de pe formularul de pe site.</p>

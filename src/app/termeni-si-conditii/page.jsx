@@ -1,11 +1,8 @@
 import Link from 'next/link';
 import './legal.css';
 import { email, numar_telefon } from '@/config/site';
-
-export const metadata = {
-  title: "Termeni și Condiții | AURVIS CONSTRUCT DESIGN",
-  description: "Termenii și condițiile de utilizare ale site-ului AURVIS CONSTRUCT DESIGN.",
-};
+import { metadata as allMetadata } from '@/config/site';
+export const metadata = allMetadata["/termeni-si-conditii"];
 
 export default function TermeniPage() {
   return (
