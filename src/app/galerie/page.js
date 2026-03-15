@@ -6,7 +6,7 @@ import { MdClose } from 'react-icons/md';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useNavProv } from '../NavContext';
 import { metadata as allMetadata } from '@/config/site';
-export const metadata = allMetadata["/galerie"];
+// export const metadata = allMetadata["/galerie"];
 const ProjectCard = ({ image_num, category = "da", delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={() => onClick()}>
