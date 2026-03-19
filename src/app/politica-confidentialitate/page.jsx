@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import '../termeni-si-conditii/legal.css';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 export const metadata = allMetadata["/politica-confidentialitate"];
 
 export default function ConfidentialitiatePage() {

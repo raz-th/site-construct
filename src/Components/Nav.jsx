@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { FiPhone } from "react-icons/fi";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./Style/Nav.css"
-import { numar_telefon, nume_complet } from '../config/site';
+import { numar_telefon, nume_complet } from '@/config/site';
 import { useNavProv } from '../app/NavContext';
 import { MdClose } from 'react-icons/md';
 import { useRouter } from 'next/navigation';

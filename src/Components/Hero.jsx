@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { HiOutlineNewspaper } from "react-icons/hi2";
 // import { IoPeopleSharp } from 'react-icons/io5';
 import { Reveal } from './Reveal';
-import { an_curent, an_inceput, clienti_multumiti, proiecte_finalizate } from '../config/site';
+import { an_curent, an_inceput, clienti_multumiti, proiecte_finalizate } from '@/config/site';
 import { LuUsersRound } from 'react-icons/lu';
 
 const Hero = () => {

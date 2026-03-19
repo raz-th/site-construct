@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaInstagram } from "react-icons/fa";
 import "./Style/Footer.css";
-import { an_inceput, nume_complet, logo192 } from '../config/site';
+import { an_inceput, nume_complet, logo192 } from '@/config/site';
 import Link from 'next/link';
 
 

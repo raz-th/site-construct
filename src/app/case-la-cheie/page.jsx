@@ -5,7 +5,7 @@ import { IoMdCloseCircleOutline, IoMdCheckmarkCircleOutline } from "react-icons/
 import "./case-la-cheie.css"
 import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 
 export const metadata = allMetadata["/case-la-cheie"];
 

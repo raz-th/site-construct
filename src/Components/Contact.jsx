@@ -3,7 +3,7 @@
 import { IoLocationOutline, IoCallOutline, IoMailOutline, IoTimeOutline } from "react-icons/io5";
 import "./Style/Contact.css";
 import { Reveal } from './Reveal';
-import { adresa, email, numar_telefon, program } from '../config/site';
+import { adresa, email, numar_telefon, program } from '@/config/site';
 // import emailjs from '@emailjs/browser';
 
 import ContactUnic from '@/app/contact/Contact_unic';

@@ -6,7 +6,7 @@ import { an_curent, an_inceput } from '@/config/site';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from './Intrebari_unic';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 
 export const metadata = allMetadata["/constructii-case"];
 

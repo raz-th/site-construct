@@ -2,7 +2,7 @@
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import "./Style/Despre.css";
 import { Reveal } from './Reveal';
-import { an_curent, an_inceput, nume_complet } from '../config/site';
+import { an_curent, an_inceput, nume_complet } from '@/config/site';
 
 const Despre = () => {
     const features = [

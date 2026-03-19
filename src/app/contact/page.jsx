@@ -5,7 +5,7 @@ import "./contact.css"
 import { email, numar_telefon, program } from '@/config/site';
 import { MdEmail } from 'react-icons/md';
 import ContactUnic from './Contact_unic';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 export const metadata = allMetadata["/contact"];
 const CardInfluente = ({ data = metode_contact[0] }) => {
     const Ic = data.icon;

@@ -7,7 +7,7 @@ import { FiHome } from "react-icons/fi";
 import "./cat_costa.css"
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
 import { an_curent } from '@/config/site';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 
 export const metadata = allMetadata["/cat-costa-constructia-unei-case"];
 

@@ -5,7 +5,7 @@ import Hero from '../Components/Hero';
 import Proiecte from '../Components/Proiecte';
 import Recenzii from '../Components/Recenzii';
 import Servicii from '../Components/Servicii';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 export const metadata = allMetadata["/"];
 
 export default function HomePage() {

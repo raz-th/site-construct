@@ -6,7 +6,7 @@ import "./case-la-rosu.css"
 import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
 import { tipuri_casa } from '@/config/site';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 
 export const metadata = allMetadata["/case-la-rosu"];
 

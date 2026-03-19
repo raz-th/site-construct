@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import './legal.css';
 import { email, numar_telefon } from '@/config/site';
-import { metadata as allMetadata } from '@/config/site';
+import { metadata as allMetadata } from '@/config/config';
 export const metadata = allMetadata["/termeni-si-conditii"];
 
 export default function TermeniPage() {
