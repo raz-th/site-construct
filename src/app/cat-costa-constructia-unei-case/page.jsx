@@ -67,7 +67,10 @@ const CardEtapa = ({ title = " ", continut = " ", i }) => {
 
 
 const intrebari_frec = [
-    { question: "Ce costuri suplimentare trebuie să iau în calcul?", answer: "Pe lângă construcția propriu-zisă, trebuie să bugetați: proiectul arhitectural, autorizația de construire, amenajarea exterioară și o rezervă de 10% pentru neprevăzute." },
+{
+  question: "Ce costuri suplimentare trebuie să iau în calcul?",
+  answer: "Pe lângă lucrările efectuate de echipa noastră, trebuie să bugetați separat proiectul arhitectural, obținerea autorizației de construire și amenajarea exterioară. De asemenea, este recomandat să păstrați o rezervă de aproximativ 10% din buget pentru cheltuieli neprevăzute."
+},
     { question: "Ce este mai avantajos: casă la roșu sau la cheie?", answer: "Casa la roșu este avantajoasă dacă aveți buget limitat acum și doriți să finisați treptat. Casa la cheie oferă un preț total mai bun (economii la pachet) și eliminați riscul de a locui într-o casă nefinisată. Recomandăm casa la cheie pentru un raport calitate-preț optimal." },
     { question: "Prețurile includ TVA?", answer: "Prețurile orientative prezentate includ TVA de 21%. La semnarea contractului veți primi un deviz detaliat cu toate costurile, inclusiv TVA-ul." },
     { question: "Costul terenului este inclus?", answer: "Nu, prețurile noastre se referă strict la construcția casei. Costul terenului, taxele notariale și eventualele lucrări de infrastructură (drum de acces, utilități la lot) sunt separate." },
@@ -82,7 +85,7 @@ const servicii = [
             "Fundație din beton armat",
             "Structură de rezistență",
             "Zidărie exterioară",
-            "Acoperiș complet"
+            "Acoperiș"
         ],
         mesaj: "Nu include instalații și finisaje",
         href: "/case-la-rosu"
@@ -96,7 +99,7 @@ const servicii = [
             "Finisaje interioare complete",
             "Casă gata de locuit"
         ],
-        mesaj: "Preț complet, fără costuri adiționale",
+        mesaj: "Prețul este orientativ și poate varia în funcție de proiect și finisaje.",
         href: "/case-la-cheie"
     },
 ]

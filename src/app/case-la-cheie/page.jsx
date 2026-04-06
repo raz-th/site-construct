@@ -139,12 +139,12 @@ const Page = () => {
             <section className='caselarosu_section1'>
                 <Reveal delay={0}>
                     <p className='introDes'>
-                       Casa la cheie reprezintă cea mai comodă soluție pentru cei care doresc o locuință nouă fără a se implica în gestionarea mai multor contracte și furnizori. Noi ne ocupăm de absolut tot: proiect, autorizații, construcție, instalații, finisaje și amenajare exterioară.
+                       Casa la cheie este alegerea potrivită pentru cei care își doresc o locuință complet finalizată, realizată eficient și fără complicații. Echipa noastră se ocupă de execuția tuturor lucrărilor necesare, de la structura construcției până la instalații și finisaje, astfel încât casa să fie pregătită pentru a fi locuită.
                     </p>
                 </Reveal>
-                <Reveal delay={1}>
+                <Reveal delay={100}>
                     <p className='introDes'>
-                        Cu un preț fix stabilit de la început și un singur interlocutor pe tot parcursul proiectului, aveți certitudinea că bugetul și termenele vor fi respectate. Vă implicați doar în alegerea finisajelor din showroom-ul nostru partener.
+                       Beneficiați de un proces de lucru mai simplu, cu o coordonare unitară a etapelor de execuție și o comunicare clară pe tot parcursul lucrării.
                     </p>
                 </Reveal>
             </section>

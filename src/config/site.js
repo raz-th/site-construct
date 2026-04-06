@@ -9,8 +9,8 @@ export const adresa = ["Str. Valea Crangului 38", "Giurgiu"];
 export const program = ["Luni - Vineri: 08:00 - 18:00", "Sâmbătă: 09:00 - 14:00"];
 export const email = "aurvis14@gmail.com";
 export const tipuri_casa = [
-    "Casă din cărămidă sau BCA (zidărie)",
-    "Casă din beton",
+    // "Casă din cărămidă sau BCA (zidărie)",
+    "Casă la cheie",
     "Casă la roșu"
 ];
 

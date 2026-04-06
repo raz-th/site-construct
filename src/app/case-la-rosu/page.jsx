@@ -41,8 +41,11 @@ const CardEtapa = ({ title = " ", continut = " ", i }) => {
 
 const intrebari_frec = [
     { question: "Cât durează construcția unei case la roșu?", answer: "În medie, o casă la roșu se construiește în 3–5 luni, în funcție de suprafață, complexitate și condițiile meteorologice." },
-    { question: "Ce materiale sunt folosite?", answer: "Folosim beton C25/30 pentru fundație și structură, BCA de 30cm sau cărămidă pentru zidărie, lemn tratat pentru șarpantă și învelitoare la alegerea clientului." },
-    { question: "Pot continua cu altă firmă finisajele?", answer: "Da, absolut. Casa la roșu este o structură completă pe care orice firmă specializată o poate finisa. Oferim cartea construcției cu toate detaliile tehnice necesare." },
+    {
+        question: "Ce materiale sunt folosite?",
+        answer: "Materialele folosite sunt stabilite conform proiectului tehnic și cerințelor fiecărei construcții. Echipa noastră respectă specificațiile proiectantului și utilizează materiale conforme standardelor de calitate, pentru o execuție sigură și durabilă."
+    },
+    // { question: "Pot continua cu altă firmă finisajele?", answer: "Da, absolut. Casa la roșu este o structură completă pe care orice firmă specializată o poate finisa. Oferim cartea construcției cu toate detaliile tehnice necesare." },
     { question: "Ce garanție oferă firma?", answer: "În prezent nu oferim garanție pentru lucrări. Execuția construcției se realizează conform proiectului tehnic și cerințelor stabilite împreună cu clientul." },
 ]
 
@@ -50,39 +53,36 @@ const intrebari_frec = [
 const ce_include = [
     {
         title: "Fundația Completă",
-        continut: "Fundație din beton armat C25/30 dimensionată conform studiului geotehnic, cu hidroizolație și drenaj perimetral."
+        continut: "Fundația realizată conform proiectului tehnic, cu hidroizolație și sistem de drenaj perimetral."
     },
     {
         title: "Structura de Rezistență",
-        continut: "Stâlpi, grinzi și centuri din beton armat, dimensionate de inginer structurist pentru siguranță maximă."
+        continut: "Stâlpi, grinzi și centuri dimensionate conform studiului structural, pentru siguranță și durabilitate."
     },
     {
         title: "Zidăria Exterioară",
-        continut: "Pereți din BCA de 30cm sau cărămidă, cu armare în centuri și buiandrugi la golurile de ferestre și uși."
+        continut: "Pereți realizați conform proiectului, cu întăriri la golurile pentru ferestre și uși, respectând standardele de rezistență."
     },
     {
-        title: "Planșee Beton Armat",
-        continut: "Plăci peste parter/etaj din beton armat turnat monolit sau prefabricat, conform proiectului structural."
+        title: "Planșee",
+        continut: "Plăci peste parter/etaj realizate conform proiectului structural, pentru stabilitate și durabilitate."
     },
     {
-        title: "Acoperișul Complet",
-        continut: "Șarpantă din lemn tratat, învelitoare la alegere (țiglă, tablă), hidroizolație, jgheaburi și burlane."
+        title: "Acoperiș",
+        continut: "Șarpanta este realizată conform proiectului, iar învelitoarea se montează sau se recomandă în funcție de soluția aleasă. Jgheaburile și burlanele sunt incluse conform necesității construcției."
     },
     {
         title: "Scară Interioară",
-        continut: "Scară din beton armat pentru casele cu etaj sau mansardă, conformă cu proiectul de arhitectură."
+        continut: "Scară interioară realizată conform proiectului de arhitectură, adaptată configurației locuinței."
     }
 ]
 
 const avantaje = [
-    // "Proiect arhitectural inclus în preț",
     "Cost inițial mai mic - plătești doar structura",
-    "Flexibilitate totală la alegerea finisajelor",
+    "Flexibilitate la alegerea finisajelor",
     "Control asupra bugetului - finisezi în ritmul tău",
-    "Poți continua cu altă firmă pentru finisaje",
-    "Beton de înaltă rezistență (C25/30 minim)",
-    "Fier beton certificat și trasabil",
-    "Hidroizolație fundație inclusă",
+    "Materiale și execuție conform proiectului și standardelor de calitate",
+    "Hidroizolație fundație inclusă"
 ]
 
 const ce_nu_include = [
@@ -100,19 +100,19 @@ const ce_nu_include = [
 const etape = [
     {
         title: 'Fundația',
-        continut: 'Săpătură, armare, cofrare și turnare fundație cu beton C25/30 și hidroizolație.',
+        continut: 'Săpătură, armare, cofrare și turnarea fundației conform proiectului, cu hidroizolație și drenaj perimetral.',
     },
     {
         title: 'Structura',
-        continut: 'Stâlpi, grinzi, centuri din beton armat - scheletul de rezistență al casei.',
+        continut: 'Stâlpi, grinzi și centuri dimensionate conform proiectului structural, pentru rezistență și siguranță.',
     },
     {
         title: 'Zidăria',
-        continut: 'Ridicare pereți exteriori și interiori din BCA sau cărămidă, cu armări în centuri.',
+        continut: 'Ridicarea pereților exteriori și interiori conform proiectului, cu întăriri la golurile pentru ferestre și uși.',
     },
     {
         title: 'Acoperișul',
-        continut: 'Montare șarpantă, învelitoare, astereală, hidroizolație și sistem pluvial.',
+        continut: 'Montarea șarpantei conform proiectului; învelitoarea se montează în funcție de soluția aleasă, cu jgheaburi și burlane conform necesității.',
     }
 ]
 
@@ -127,7 +127,7 @@ const Page = () => {
                         </div>
                       </Reveal> */}
 
-                    <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
+                    <Reveal delay={100}><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
                     <Reveal>
                         <h1>
                             Construcții Case la Roșu
@@ -152,12 +152,17 @@ const Page = () => {
             <section className='caselarosu_section1'>
                 <Reveal delay={0}>
                     <p className='introDes'>
-                        O casă la roșu reprezintă structura de rezistență a locuinței, complet finalizată și pregătită pentru etapa de finisare. Aceasta include fundația, pereții structurali, planșeele, acoperișul și, în funcție de contract, tâmplăria exterioară.
+                        Construcția unei case la roșu reprezintă etapa de bază a locuinței, în care sunt realizate toate elementele structurale esențiale. Aceasta include <b>fundația, structura de rezistență, pereții, planșeele și acoperișul</b>, oferind o bază solidă și sigură pentru continuarea lucrărilor.
                     </p>
                 </Reveal>
-                <Reveal delay={1}>
+                <Reveal delay={100}>
                     <p className='introDes'>
-                        Alegerea construcției la roșu este o opțiune populară în România deoarece oferă un echilibru excelent între cost și control. Puteți finaliza finisajele în ritmul propriu, cu bugetul disponibil, sau puteți apela la altă firmă pentru lucrările interioare.
+                        Este una dintre cele mai apreciate opțiuni de construcție, deoarece oferă un echilibru foarte bun între <b>investiție, control și flexibilitate</b>. Cu ajutorul echipei noastre, fiecare etapă este executată cu atenție, profesionalism și respectarea standardelor de calitate, astfel încât beneficiarul să aibă siguranța unei lucrări bine realizate încă de la început.
+                    </p>
+                </Reveal>
+                <Reveal delay={200}>
+                    <p className='introDes'>
+                        Este soluția ideală pentru cei care își doresc o construcție bine executată, cu posibilitatea de a personaliza ulterior fiecare detaliu.
                     </p>
                 </Reveal>
             </section>
@@ -261,7 +266,7 @@ const Page = () => {
                             </ol>
                         </div>
                     </Reveal>
-                    <ContactUnic tip_proiect={tipuri_casa[2]}/>
+                    <ContactUnic tip_proiect={tipuri_casa[2]} />
                 </div>
             </section>
             <section className='caselarosu_section4'>

@@ -373,7 +373,7 @@
 
 .card_caselarosu_case {
     background-color: #fff;
-    padding: 2rem 4rem;
+    padding: 2rem 2.5rem;
     border-radius: 15px;
     box-shadow: var(--shadow-md);
     transition: transform 0.5s, box-shadow 0.2s;

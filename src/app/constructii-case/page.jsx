@@ -88,48 +88,50 @@ const etape = [
   },
   {
     title: 'Pregătire teren',
-    des: 'Decopertare, săpătură, nivelare și pregătirea amplasamentului pentru turnarea fundației.'
+    des: 'Decopertare, săpătură, nivelare și pregătirea amplasamentului conform proiectului.'
   },
   {
     title: 'Fundația',
-    des: 'Armare, cofrare și turnare fundație din beton armat C25/30, conform studiului geotehnic.'
+    des: 'Armare, cofrare și turnarea fundației conform proiectului și studiului geotehnic, cu hidroizolație și drenaj perimetral.'
   },
   {
     title: 'Structura & zidăria',
-    des: 'Ridicare pereți, stâlpi, grinzi, planșee - structura de rezistență completă a casei.'
+    des: 'Ridicare pereți, stâlpi, grinzi și planșee - structura de rezistență a casei conform proiectului.'
   },
   {
     title: 'Acoperișul',
-    des: 'Montare șarpantă din lemn tratat, învelitoare, hidroizolație, jgheaburi și burlane.'
+    des: 'Montarea șarpantei conform proiectului; învelitoarea se recomandă sau se montează în funcție de soluția aleasă, cu jgheaburi și burlane conform necesității.'
   },
   {
     title: 'Instalațiile',
-    des: 'Instalații electrice, sanitare, termice și de ventilație conform normativelor în vigoare.'
+    des: 'Instalații electrice, sanitare, termice și de ventilație realizate conform normativelor în vigoare.'
   },
   {
     title: 'Finisajele',
-    des: 'Tencuieli, pardoseli, gresie, faianță, vopsitorii decorative și tâmplărie interioară.'
+    des: 'Tencuieli, pardoseli, gresie, faianță, vopsitorii decorative și tâmplărie interioară conform proiectului.'
   },
   {
     title: 'Predarea cheilor',
-    des: 'Verificări finale, recepție, curățenie profesională și predarea casei finalizate.'
+    des: 'Verificări finale, recepție, curățenie profesională și predarea casei gata de utilizare.'
   }
 ]
 
 const avantaje = [
-  // "Proiect arhitectural inclus în preț",
-  "Materiale de construcție certificate și trasabile",
-  "Izolație termică și fonică la standarde europene",
-  "Instalații electrice și sanitare cu certificat de garanție",
-  "Sisteme de încălzire eficiente energetic",
-  "Finisaje interioare și exterioare la alegere",
+  "Materiale și execuție conform proiectului și standardelor de calitate",
+  "Izolație termică și fonică realizată conform normativelor în vigoare",
+  "Instalații electrice și sanitare executate profesional",
+  "Sisteme de încălzire eficiente și conforme proiectului",
+  "Finisaje interioare conform proiectului"
 ]
 
 const intrebari_frec = [
   { question: "Cât costă construcția unei case?", answer: "Prețul variază în funcție de tipul construcției: casa la roșu costă între 300-450 €/mp, iar casa la cheie între 700-1200 €/mp. Prețul final depinde de complexitatea proiectului, materialele alese și suprafața construită." },
   { question: "Cât durează construcția unei case?", answer: "O casă la roșu se construiește în 3-5 luni, iar o casă la cheie în 6-12 luni, în funcție de complexitate și condițiile meteo. Oferim un calendar detaliat de execuție la semnarea contractului." },
   { question: "Ce include construcția la roșu?", answer: "Construcția la roșu include fundația, structura de rezistență (stâlpi, grinzi, planșee), zidăria exterioară și acoperișul. Nu include instalații, finisaje interioare sau amenajări exterioare." },
-  { question: "Ce materiale folosiți?", answer: "Folosim materiale certificate de la furnizori de încredere: beton C25/30 minim, BCA sau cărămidă premium, fier beton certificat, lemn tratat pentru șarpantă și izolații de ultimă generație." },
+  { 
+    question: "Ce materiale folosiți?", 
+    answer: "Materialele folosite respectă proiectul tehnic și standardele de calitate. Execuția se realizează profesional pentru siguranță și durabilitate, conform specificațiilor proiectantului." 
+  },
   { question: "Oferiți garanție pentru lucrări?", answer: "În prezent nu oferim garanție formală pentru lucrări. Ne concentrăm însă pe realizarea construcțiilor cu atenție la detalii și utilizarea unor materiale de calitate, pentru a asigura durabilitatea și siguranța fiecărui proiect." },
   { question: "Oferiți și servicii de proiectare?", answer: "Nu oferim servicii de proiectare. Lucrăm pe baza proiectului furnizat de client sau realizat de arhitectul ales de acesta, iar echipa noastră se ocupă de execuția construcției conform planurilor tehnice." },
 ]
