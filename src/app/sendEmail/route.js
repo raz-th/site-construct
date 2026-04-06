@@ -13,7 +13,7 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         sender: { name: "noreply", email: "niculae.razvanwork@gmail.com" },
-        to: [{ email: data.toEmail, name: data.toName }],
+        to: [{ email: "aurvis14@gmail.com", name: data.toName }],
         subject: data.subject,
         htmlContent: data.htmlContent,
       }),
