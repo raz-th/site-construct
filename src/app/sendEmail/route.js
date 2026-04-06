@@ -12,7 +12,7 @@ export async function POST(request) {
         "api-key": process.env.BREVO_API_KEY,
       },
       body: JSON.stringify({
-        sender: { name: "noreply", email: "niculae.razvanwork@gmail.com" },
+        sender: { name: "noreply", email: "aurvis14@gmail.com" },
         to: [{ email: "aurvis14@gmail.com", name: data.toName }],
         subject: data.subject,
         htmlContent: data.htmlContent,
