@@ -9,13 +9,16 @@ import { Success } from "@/Components/Messages";
 
 
 export const metadata = {
-  title: "Construcții Case și Vile București | AURVIS CONSTRUCT DESIGN",
-  description: "Construim case moderne, vile de lux și locuințe premium. Servicii complete de la proiectare până la finisaje. Contactează-ne pentru ofertă!",
-  keywords: "constructii case, firma constructii case, constructii vile, constructii rezidentiale, case moderne, vile lux",
+  title: "Construcții Case București și Ilfov | Case la Roșu și la Cheie | AURVIS CONSTRUCT DESIGN",
+  description:
+    "Firmă de construcții case în București și Ilfov. Realizăm case la roșu și case la cheie, cu execuție conform proiectului și atenție la calitate. Solicitați o ofertă personalizată!",
+  keywords:
+    "construcții case București, construcții case Ilfov, firmă construcții București, firmă construcții Ilfov, case la roșu București, case la cheie București, constructor case București, construcții rezidențiale",
   robots: "index, follow",
   openGraph: {
-    title: "Construcții Case și Vile | AURVIS CONSTRUCT DESIGN",
-    description: "Firmă de construcții case și vile. Construim case moderne, vile de lux și locuințe premium.",
+    title: "Construcții Case București și Ilfov | AURVIS CONSTRUCT DESIGN",
+    description:
+      "Executăm construcții case la roșu și la cheie în București și Ilfov, conform proiectului și standardelor de calitate.",
     url: "https://constructii-casa.ro",
     type: "website",
   },
