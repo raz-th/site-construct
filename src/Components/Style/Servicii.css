@@ -127,3 +127,17 @@
     line-height: 1.6;
     font-size: 0.95rem;
 }
+
+@media (max-width: 768px) {
+    .servicii {
+        padding: 4rem 1rem;
+    }
+
+    .servicii .t {
+        font-size: 2rem;
+    }
+
+    .servicii .description {
+        font-size: 1rem;
+    }
+}

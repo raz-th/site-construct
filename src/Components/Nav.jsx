@@ -30,14 +30,14 @@ const Nav = () => {
         try {
             if (typeof window !== 'undefined') {
                 if (window.scrollY > 50) {
-                    setIsVisible(true);
+                    // setIsVisible(true);
                     document.querySelector('header').classList.add('glass');
                 } else {
                     document.querySelector('header').classList.remove('glass');
                 }
-                if (window.scrollY > lastScrollY) setIsVisible(false);
-                else setIsVisible(true);
-                setLastScrollY(window.scrollY);
+                // if (window.scrollY > lastScrollY) { setIsVisible(false); }
+                // else setIsVisible(true);
+                // setLastScrollY(window.scrollY);
                 const winScroll = document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrolled = (winScroll / height) * 100;
@@ -56,43 +56,43 @@ const Nav = () => {
 
     if (!showNav) return null
 
-        return (
-            <header className={isVisible ? '' : 'nav-hidden'}>
-                <div className='header-content'>
-                    <div className='nav-section' style={{cursor: 'pointer'}} onClick={()=>nav.push("/")}>
-                        {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
-                        <div>
-                            <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
-                            <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i) => i > 0 ? v + " " : '')}</p>
-
-                        </div>
-                    </div>
-                    <nav className="nav-section">
-                        <ul>
-                            {Object.keys(navigs).map((key, i) => { return <li key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
-                        </ul>
-                    </nav>
-                    <div className="nav-section">
-                        <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                        <a className='btn-primary' href='/#contact'>Solicită ofertă</a>
-                    </div>
-                    <div className="nav-section">
-                        {showMobileNav ? <IoClose size={35} onClick={() => setShowMobileNav((v) => !v)} /> : <IoMenu size={35} onClick={() => setShowMobileNav((v) => !v)} />}
+    return (
+        <header className={isVisible ? '' : 'nav-hidden'}>
+            <div className='header-content'>
+                <div className='nav-section' style={{ cursor: 'pointer' }} onClick={() => nav.push("/")}>
+                    {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
+                    <div>
+                        <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
+                        <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i) => i > 0 ? v + " " : '')}</p>
 
                     </div>
                 </div>
-                <nav className={`mobile-nav-menu ${showMobileNav ? "show" : "hide"}`}>
+                <nav className="nav-section">
                     <ul>
-                        {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
+                        {Object.keys(navigs).map((key, i) => { return <li key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
                     </ul>
-                    <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                    <a onClick={() => setShowMobileNav(false)} href='/#contact' className='btn-primary'>Solicită Ofertă</a>
                 </nav>
-                <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
-                    <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
+                <div className="nav-section">
+                    <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
+                    <a className='btn-primary' href='/#contact'>Solicită ofertă</a>
                 </div>
-            </header>
-        );
+                <div className="nav-section">
+                    {showMobileNav ? <IoClose size={35} onClick={() => setShowMobileNav((v) => !v)} /> : <IoMenu size={35} onClick={() => setShowMobileNav((v) => !v)} />}
+
+                </div>
+            </div>
+            <nav className={`mobile-nav-menu ${showMobileNav ? "show" : "hide"}`}>
+                <ul>
+                    {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
+                </ul>
+                <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
+                <a onClick={() => setShowMobileNav(false)} href='/#contact' className='btn-primary'>Solicită Ofertă</a>
+            </nav>
+            <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
+                <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
+            </div>
+        </header>
+    );
 }
 
 export default Nav;
