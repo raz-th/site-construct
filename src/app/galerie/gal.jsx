@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./Galerie.css"
 import { Reveal } from '../../Components/Reveal';
 import { MdClose } from 'react-icons/md';
@@ -7,20 +7,40 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useNavProv } from '../NavContext';
 import Link from 'next/link';
 
-const ProjectCard = ({ image_num, delay, onClick }) => (
-    <Reveal delay={delay}>
+const ProjectCard = ({ image_num, delay, onClick }) => {
+    const [loaded, setLoaded] = useState(false);
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        if (imgRef.current?.complete) {
+            setLoaded(true);
+        }
+    }, []);
+
+    return (
         <div className="project-card" onClick={onClick}>
-            <div className="project-image-container">
-                <img src={`/poze_galerie/image513/image${image_num}.jpg`} alt="" loading="lazy" />
-                <div className="zoom-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
-                    </svg>
+                <div className="project-image-container">
+                    {!loaded && <div className="img-skeleton" />}
+                    <img
+                        ref={imgRef}
+                        src={`/poze_galerie/image513/image${image_num}.jpg`}
+                        alt=""
+                        loading="lazy"
+                        onLoad={() => setLoaded(true)}
+                        onError={() => setLoaded(true)}
+                        style={{ opacity: loaded ? 1 : 0, transition: 'opacity 0.3s ease' }}
+                    />
+                    {loaded && (
+                        <div className="zoom-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+                            </svg>
+                        </div>
+                    )}
                 </div>
             </div>
-        </div>
-    </Reveal>
-);
+    );
+};
 
 const GaleriePage = () => {
     const [selected_image, setSelected_image] = useState(null)
@@ -60,9 +80,10 @@ const GaleriePage = () => {
         }
     };
 
-    // useEffect(() => {
-    //     setshowNav(false);
-    // }, [])
+    useEffect(() => {
+        if (selected_image) setshowNav(false);
+        else setshowNav(true);
+    }, [selected_image])
 
 
     return (
@@ -104,7 +125,7 @@ const GaleriePage = () => {
             <p className="description">O colecție extinsă de lucrări realizate, case finalizate, interioare moderne și proiecte aflate în execuție.</p>
             <div className='galerie-grid'>
                 {projects.map((v, index) => (
-                    <ProjectCard key={index} delay={index * 120} image_num={v} onClick={() => { setSelected_image(v); toggleScroll(true); }} />
+                    <ProjectCard key={index} delay={index * 100} image_num={v} onClick={() => { setSelected_image(v); toggleScroll(true); }} />
                 ))}
             </div>
         </div>
