@@ -6,6 +6,7 @@ import { email, numar_telefon, program } from '@/config/site';
 import { MdEmail } from 'react-icons/md';
 import ContactUnic from './Contact_unic';
 import { metadata as allMetadata } from '@/config/config';
+import { FakeNav } from '@/Components/Nav';
 export const metadata = allMetadata["/contact"];
 const CardInfluente = ({ data = metode_contact[0] }) => {
     const Ic = data.icon;
@@ -51,48 +52,51 @@ const de_ce = [
 
 const Page = () => {
     return (
-        <div className='serviciu-page'>
-            <div className='contactpage_hero_fade'>
-                <div className='contactpage_hero_content'>
+        <>
+            <FakeNav />
+            <div className='serviciu-page'>
+                <div className='contactpage_hero_fade'>
+                    <div className='contactpage_hero_content'>
 
-                    <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
-                    <Reveal>
-                        <h1>
-                            Contactează-ne
-                        </h1>
-                    </Reveal>
+                        <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
+                        <Reveal>
+                            <h1>
+                                Contactează-ne
+                            </h1>
+                        </Reveal>
 
-                    <Reveal>
-                        <p className='contactpage_hero_description'>
-                            Suntem aici să răspundem la toate întrebările tale. Solicită o consultanță gratuită sau cere o ofertă personalizată.
-                        </p>
-                    </Reveal>
+                        <Reveal>
+                            <p className='contactpage_hero_description'>
+                                Suntem aici să răspundem la toate întrebările tale. Solicită o consultanță gratuită sau cere o ofertă personalizată.
+                            </p>
+                        </Reveal>
 
+                    </div>
                 </div>
+                <section className='contactpage_section1'>
+                    <div className='contactpage_section_grid3'>
+                        {
+                            metode_contact.map((v, i) => <CardInfluente key={i} data={v} />)
+                        }
+                    </div>
+                </section>
+                <section className='contactpage_section2'>
+                    <div className='contactpage_section_grid2'>
+                        <ContactUnic />
+                        <Reveal>
+                            <div className='deCeCard'>
+                                <h2>De ce să ne contactezi?</h2>
+                                <ol>
+                                    {
+                                        de_ce.map((v, i) => <li key={i}>{v}</li>)
+                                    }
+                                </ol>
+                            </div>
+                        </Reveal>
+                    </div>
+                </section>
             </div>
-            <section className='contactpage_section1'>
-                <div className='contactpage_section_grid3'>
-                    {
-                        metode_contact.map((v, i) => <CardInfluente key={i} data={v} />)
-                    }
-                </div>
-            </section>
-            <section className='contactpage_section2'>
-                <div className='contactpage_section_grid2'>
-                    <ContactUnic />
-                    <Reveal>
-                        <div className='deCeCard'>
-                            <h2>De ce să ne contactezi?</h2>
-                            <ol>
-                                {
-                                    de_ce.map((v, i) => <li key={i}>{v}</li>)
-                                }
-                            </ol>
-                        </div>
-                    </Reveal>
-                </div>
-            </section>
-        </div>
+        </>
     );
 }
 

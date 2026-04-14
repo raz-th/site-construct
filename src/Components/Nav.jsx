@@ -20,6 +20,39 @@ const navigs = {
 }
 
 
+export const FakeNav = () => {
+    return (
+        <header style={{ opacity: 0, zIndex: -100, position: 'relative' }}>
+            <div className='header-content'>
+                <div className='nav-section' style={{ cursor: 'pointer' }}>
+                    {/* <div className='logo-nav'><img width={65} src={logo192}/></div> */}
+                    <div>
+                        <h1 className='nume_header'>{nume_complet.split(' ')[0]}</h1>
+                        <p className='nume_sub_header'>{nume_complet.split(' ').map((v, i) => i > 0 ? v + " " : '')}</p>
+
+                    </div>
+                </div>
+                <nav className="nav-section">
+                    <ul>
+                        {Object.keys(navigs).map((key, i) => { return <li key={i}><p>{key}</p></li> })}
+                    </ul>
+                </nav>
+                <div className="nav-section">
+                    <p className='a-tel'><FiPhone color='var(--accent-color)' /> numar</p>
+                    <p className='btn-primary'>Solicită ofertă</p>
+                </div>
+                <div className="nav-section">
+                    <IoClose size={35} />
+
+                </div>
+            </div>
+            <div className='scrollbar-container' style={{ background: "transparent" }}>
+                <div className='scrollbar' style={{ width: `0%` }} />
+            </div>
+        </header>
+    )
+}
+
 const Nav = () => {
     const [showMobileNav, setShowMobileNav] = useState(false)
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -58,6 +91,9 @@ const Nav = () => {
 
     if (!showNav) return null
     return (
+
+
+
         <header className={isVisible ? '' : 'nav-hidden'}>
             <div className='header-content'>
                 <div className='nav-section' style={{ cursor: 'pointer' }} onClick={() => nav.push("/")}>
@@ -70,7 +106,7 @@ const Nav = () => {
                 </div>
                 <nav className="nav-section">
                     <ul>
-                        {Object.keys(navigs).map((key, i) => { return <li className={path === navigs[key]?"selected":""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
+                        {Object.keys(navigs).map((key, i) => { return <li className={path === navigs[key] ? "selected" : ""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
                     </ul>
                 </nav>
                 <div className="nav-section">
@@ -84,7 +120,7 @@ const Nav = () => {
             </div>
             <nav className={`mobile-nav-menu ${showMobileNav ? "show" : "hide"}`}>
                 <ul>
-                    {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} className={path === navigs[key]?"selected":""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
+                    {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} className={path === navigs[key] ? "selected" : ""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
                 </ul>
                 <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
                 <a onClick={() => setShowMobileNav(false)} href='/contact' className='btn-primary'>Solicită Ofertă</a>
@@ -93,6 +129,8 @@ const Nav = () => {
                 <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
             </div>
         </header>
+
+
     );
 }
 

@@ -6,6 +6,7 @@ import "./case-la-cheie.css"
 import ContactUnic from '../contact/Contact_unic';
 import IntrebariUnic from '../constructii-case/Intrebari_unic';
 import { metadata as allMetadata } from '@/config/config';
+import { FakeNav } from '@/Components/Nav';
 
 export const metadata = allMetadata["/case-la-cheie"];
 
@@ -105,145 +106,148 @@ const etape = [
 
 const Page = () => {
     return (
-        <div className='serviciu-page'>
-            <div className='caselarosu_hero_fade'>
-                <div className='caselarosu_hero_content'>
-                    {/* <Reveal>
+        <>
+            <FakeNav />
+            <div className='serviciu-page'>
+                <div className='caselarosu_hero_fade'>
+                    <div className='caselarosu_hero_content'>
+                        {/* <Reveal>
                         <div className='badge'>
                           <PiMedal /> Peste {parseInt((an_curent - an_inceput) / 10)}0 de ani de excelență în construcții
                         </div>
                       </Reveal> */}
 
-                    <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
-                    <Reveal>
-                        <h1>
-                            Construcții Case la Cheie
-                        </h1>
-                    </Reveal>
+                        <Reveal><a className='inapoi_hero' href='/'><FaArrowLeft /> Înapoi la pagina principală</a></Reveal>
+                        <Reveal>
+                            <h1>
+                                Construcții Case la Cheie
+                            </h1>
+                        </Reveal>
 
-                    <Reveal>
-                        <p className='caselarosu_hero_description'>
-                            O casă la cheie este o locuință complet finisată și gata de locuit. De la fundație la mobilier, de la instalații la grădină — primiți cheile și vă mutați fără niciun efort suplimentar.
+                        <Reveal>
+                            <p className='caselarosu_hero_description'>
+                                O casă la cheie este o locuință complet finisată și gata de locuit. De la fundație la mobilier, de la instalații la grădină — primiți cheile și vă mutați fără niciun efort suplimentar.
+                            </p>
+                        </Reveal>
+
+                        <Reveal>
+                            <div className='caselarosu_hero_actions'>
+                                <a href='#contact' className='btn-primary'>
+                                    Solicită Ofertă Gratuită <FaArrowRight />
+                                </a>
+                            </div>
+                        </Reveal>
+                    </div>
+                </div>
+                <section className='caselarosu_section1'>
+                    <Reveal delay={0}>
+                        <p className='introDes'>
+                            Casa la cheie este alegerea potrivită pentru cei care își doresc o locuință complet finalizată, realizată eficient și fără complicații. Echipa noastră se ocupă de execuția tuturor lucrărilor necesare, de la structura construcției până la instalații și finisaje, astfel încât casa să fie pregătită pentru a fi locuită.
                         </p>
                     </Reveal>
-
-                    <Reveal>
-                        <div className='caselarosu_hero_actions'>
-                            <a href='#contact' className='btn-primary'>
-                                Solicită Ofertă Gratuită <FaArrowRight />
-                            </a>
-                        </div>
+                    <Reveal delay={100}>
+                        <p className='introDes'>
+                            Beneficiați de un proces de lucru mai simplu, cu o coordonare unitară a etapelor de execuție și o comunicare clară pe tot parcursul lucrării.
+                        </p>
                     </Reveal>
-                </div>
-            </div>
-            <section className='caselarosu_section1'>
-                <Reveal delay={0}>
-                    <p className='introDes'>
-                       Casa la cheie este alegerea potrivită pentru cei care își doresc o locuință complet finalizată, realizată eficient și fără complicații. Echipa noastră se ocupă de execuția tuturor lucrărilor necesare, de la structura construcției până la instalații și finisaje, astfel încât casa să fie pregătită pentru a fi locuită.
-                    </p>
-                </Reveal>
-                <Reveal delay={100}>
-                    <p className='introDes'>
-                       Beneficiați de un proces de lucru mai simplu, cu o coordonare unitară a etapelor de execuție și o comunicare clară pe tot parcursul lucrării.
-                    </p>
-                </Reveal>
-            </section>
-            <section className='caselarosu_section2'>
-                <div className="caselarosu_sectionheader">
-                    <Reveal>
-                        <div className="caselarosu_sectionheader-text">
-                            <p className="subtitle">Ce Include</p>
-                            <h2>Ce include o casă la cheie</h2>
-                        </div>
-                    </Reveal>
-                </div>
-                <div className='caselarosu_section_grid'>
-                    {
-                        ce_include.map((v, i) => {
-                            return (
-                                <Card key={i} title={v.title} continut={v.continut} />
-                            )
-                        })
-                    }
-                </div>
-            </section>
-        
-            <section className='caselarosu_section1'>
-                <div className="caselarosu_sectionheader">
-                    <Reveal>
-                        <div className="caselarosu_sectionheader-text">
-                            <p className="subtitle">Etapele Construcției</p>
-                            <h2>Cum construim casa la cheie</h2>
-                        </div>
-                    </Reveal>
-                </div>
-
-                <Reveal>
-                    <div className='caselarosu_section_grid2'>
+                </section>
+                <section className='caselarosu_section2'>
+                    <div className="caselarosu_sectionheader">
+                        <Reveal>
+                            <div className="caselarosu_sectionheader-text">
+                                <p className="subtitle">Ce Include</p>
+                                <h2>Ce include o casă la cheie</h2>
+                            </div>
+                        </Reveal>
+                    </div>
+                    <div className='caselarosu_section_grid'>
                         {
-                            etape.map((v, i) => (
-                                <CardEtapa
-                                    key={i}
-                                    i={i}
-                                    title={v.title}
-                                    continut={v.continut}
-                                    isLast={i === etape.length - 1}
-                                />
-                            ))
+                            ce_include.map((v, i) => {
+                                return (
+                                    <Card key={i} title={v.title} continut={v.continut} />
+                                )
+                            })
                         }
                     </div>
-                </Reveal>
-            </section>
-            <section className='caselarosu_section2'>
-                <div className="caselarosu_sectionheader">
-                    <Reveal>
-                        <div className="caselarosu_sectionheader-text">
-                            <p className="subtitle">Preț Orientativ</p>
-                            <h2>Investiția dumneavoastră</h2>
-                        </div>
-                    </Reveal>
-                </div>
-                <Reveal width='fit-content' >
-                    <div className='card_caselarosu_case_pret'>
-                        <h1>
-                            700 – 1200 €/mp
-                        </h1>
-                        <p>
-                            *Prețul variază în funcție de complexitatea proiectului, materiale și suprafață.
-                        </p>
-                    </div>
-                </Reveal>
-            </section>
-            <section className='caselarosu_section3'>
-                <div className='contact_content'>
-                    <Reveal width='fit-content'>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                            <div>
-                                <p className="subtitle">AVANTAJE</p>
-                                <h2>Avantajele unei case la cheie</h2>
+                </section>
+
+                <section className='caselarosu_section1'>
+                    <div className="caselarosu_sectionheader">
+                        <Reveal>
+                            <div className="caselarosu_sectionheader-text">
+                                <p className="subtitle">Etapele Construcției</p>
+                                <h2>Cum construim casa la cheie</h2>
                             </div>
-                            <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
-                                {
-                                    avantaje.map((v, i) => <li style={{ display: 'flex', alignItems: 'center', gap: 10 }} key={i}><IoMdCheckmarkCircleOutline size={20} color='var(--accent-color)' /><p>{v}</p></li>)
-                                }
-                            </ol>
-                        </div>
-                    </Reveal>
-                    <ContactUnic />
-                </div>
-            </section>
-            <section className='caselarosu_section4'>
-                <div className="caselarosu_sectionheader">
+                        </Reveal>
+                    </div>
+
                     <Reveal>
-                        <div className="caselarosu_sectionheader-text">
-                            <p className="subtitle">Întrebări Frecvente</p>
-                            <h2>Ai <span>Întrebări?</span></h2>
+                        <div className='caselarosu_section_grid2'>
+                            {
+                                etape.map((v, i) => (
+                                    <CardEtapa
+                                        key={i}
+                                        i={i}
+                                        title={v.title}
+                                        continut={v.continut}
+                                        isLast={i === etape.length - 1}
+                                    />
+                                ))
+                            }
                         </div>
                     </Reveal>
-                </div>
-                <IntrebariUnic intrebari={intrebari_frec} />
-            </section>
-        </div>
+                </section>
+                <section className='caselarosu_section2'>
+                    <div className="caselarosu_sectionheader">
+                        <Reveal>
+                            <div className="caselarosu_sectionheader-text">
+                                <p className="subtitle">Preț Orientativ</p>
+                                <h2>Investiția dumneavoastră</h2>
+                            </div>
+                        </Reveal>
+                    </div>
+                    <Reveal width='fit-content' >
+                        <div className='card_caselarosu_case_pret'>
+                            <h1>
+                                700 – 1200 €/mp
+                            </h1>
+                            <p>
+                                *Prețul variază în funcție de complexitatea proiectului, materiale și suprafață.
+                            </p>
+                        </div>
+                    </Reveal>
+                </section>
+                <section className='caselarosu_section3'>
+                    <div className='contact_content'>
+                        <Reveal width='fit-content'>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                                <div>
+                                    <p className="subtitle">AVANTAJE</p>
+                                    <h2>Avantajele unei case la cheie</h2>
+                                </div>
+                                <ol style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 20, fontSize: 20 }} >
+                                    {
+                                        avantaje.map((v, i) => <li style={{ display: 'flex', alignItems: 'center', gap: 10 }} key={i}><IoMdCheckmarkCircleOutline size={20} color='var(--accent-color)' /><p>{v}</p></li>)
+                                    }
+                                </ol>
+                            </div>
+                        </Reveal>
+                        <ContactUnic />
+                    </div>
+                </section>
+                <section className='caselarosu_section4'>
+                    <div className="caselarosu_sectionheader">
+                        <Reveal>
+                            <div className="caselarosu_sectionheader-text">
+                                <p className="subtitle">Întrebări Frecvente</p>
+                                <h2>Ai <span>Întrebări?</span></h2>
+                            </div>
+                        </Reveal>
+                    </div>
+                    <IntrebariUnic intrebari={intrebari_frec} />
+                </section>
+            </div>
+        </>
     );
 }
 

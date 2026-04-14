@@ -5,9 +5,8 @@ import { Reveal } from '../../Components/Reveal';
 import { MdClose } from 'react-icons/md';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { useNavProv } from '../NavContext';
-import { metadata as allMetadata } from '@/config/config';
 import Link from 'next/link';
-// export const metadata = allMetadata["/galerie"];
+
 const ProjectCard = ({ image_num, delay, onClick }) => (
     <Reveal delay={delay}>
         <div className="project-card" onClick={onClick}>
@@ -61,9 +60,9 @@ const GaleriePage = () => {
         }
     };
 
-    useEffect(() => {
-        setshowNav(false);
-    }, [])
+    // useEffect(() => {
+    //     setshowNav(false);
+    // }, [])
 
 
     return (
@@ -96,10 +95,10 @@ const GaleriePage = () => {
                     </button>
                 </div>
             )}
-            <Link href="/" className="back-home-btn">
+            {/* <Link href="/" className="back-home-btn">
                 <FaAngleLeft />
                 <span>Acasă</span>
-            </Link>
+            </Link> */}
             <p className="subtitle">PORTOFOLIU COMPLET</p>
             <h1>Galerie Proiecte</h1>
             <p className="description">O colecție extinsă de lucrări realizate, case finalizate, interioare moderne și proiecte aflate în execuție.</p>
