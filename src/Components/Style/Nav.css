@@ -86,13 +86,22 @@ header .nume_sub_header {
 }
 
 
+
 nav.nav-section ul {
   list-style: none;
   display: flex;
   gap: 20px;
   gap: 3rem;
+
+}
+
+nav.nav-section ul li {
   font-weight: 500;
   color: var(--muted);
+}
+
+nav.nav-section ul li.selected a{
+  color: var(--accent-color);
 }
 
 nav.nav-section ul a {
@@ -160,8 +169,12 @@ nav.nav-section ul a {
   margin-bottom: 10px;
 }
 
+.mobile-nav-menu ul li.selected a{
+  color: var(--accent-color);
+}
 
-@media (max-width: 1100px) {
+
+@media (max-width: 1250px) {
   header {
     padding: 1rem;
 

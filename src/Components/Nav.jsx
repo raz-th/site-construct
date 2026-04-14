@@ -6,16 +6,17 @@ import "./Style/Nav.css"
 import { numar_telefon, nume_complet } from '@/config/site';
 import { useNavProv } from '../app/NavContext';
 import { MdClose } from 'react-icons/md';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 
 const navigs = {
-    "Acasă": "#acasa",
-    "Servicii": "#servicii",
-    "Proiecte": "#proiecte",
-    "Recenzii": "#recenzii",
-    "Despre Noi": "#despre_noi",
-    "Contact": "#contact"
+    "Acasă": "/",
+    "Servicii": "/constructii-case",
+    "Case la Roșu": "/case-la-rosu",
+    "Case la Cheie": "/case-la-cheie",
+    "Prețuri": "/cat-costa-constructia-unei-case",
+    "Galerie": "/galerie",
+    "Contact": "/contact"
 }
 
 
@@ -26,6 +27,7 @@ const Nav = () => {
     const [scrollWidth, setScrollWidth] = useState(0);
     const { showNav } = useNavProv();
     const nav = useRouter();
+    const path = usePathname();
     const controlNavbar = useCallback(() => {
         try {
             if (typeof window !== 'undefined') {
@@ -55,7 +57,6 @@ const Nav = () => {
     }, [controlNavbar]);
 
     if (!showNav) return null
-
     return (
         <header className={isVisible ? '' : 'nav-hidden'}>
             <div className='header-content'>
@@ -69,12 +70,12 @@ const Nav = () => {
                 </div>
                 <nav className="nav-section">
                     <ul>
-                        {Object.keys(navigs).map((key, i) => { return <li key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
+                        {Object.keys(navigs).map((key, i) => { return <li className={path === navigs[key]?"selected":""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
                     </ul>
                 </nav>
                 <div className="nav-section">
                     <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                    <a className='btn-primary' href='/#contact'>Solicită ofertă</a>
+                    <a className='btn-primary' href='/contact'>Solicită ofertă</a>
                 </div>
                 <div className="nav-section">
                     {showMobileNav ? <IoClose size={35} onClick={() => setShowMobileNav((v) => !v)} /> : <IoMenu size={35} onClick={() => setShowMobileNav((v) => !v)} />}
@@ -83,10 +84,10 @@ const Nav = () => {
             </div>
             <nav className={`mobile-nav-menu ${showMobileNav ? "show" : "hide"}`}>
                 <ul>
-                    {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} key={i}><a href={`/${navigs[key]}`}>{key}</a></li> })}
+                    {Object.keys(navigs).map((key, i) => { return <li onClick={() => setShowMobileNav(false)} className={path === navigs[key]?"selected":""} key={i}><a href={`${navigs[key]}`}>{key}</a></li> })}
                 </ul>
                 <a className='a-tel' href={`tel:${numar_telefon}`}><FiPhone color='var(--accent-color)' /> {numar_telefon}</a>
-                <a onClick={() => setShowMobileNav(false)} href='/#contact' className='btn-primary'>Solicită Ofertă</a>
+                <a onClick={() => setShowMobileNav(false)} href='/contact' className='btn-primary'>Solicită Ofertă</a>
             </nav>
             <div className='scrollbar-container' style={{ background: scrollWidth > 0 ? "#1a1e24" : "transparent" }}>
                 <div className='scrollbar' style={{ width: `${scrollWidth}%` }} />
