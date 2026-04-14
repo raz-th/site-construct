@@ -28,12 +28,4 @@
     <loc>https://constructii-casa.ro/contact</loc>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://constructii-casa.ro/termeni-si-conditii</loc>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://constructii-casa.ro/politica-confidentialitate</loc>
-    <priority>0.3</priority>
-  </url>
 </urlset>

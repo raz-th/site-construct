@@ -4,26 +4,40 @@ import { tipuri_casa } from '@/config/site';
 import { sendEmail } from '@/sendEmail';
 import React, { useEffect, useState } from 'react';
 import { useNavProv } from '../NavContext';
+import Link from 'next/link';
 
 const ContactUnic = ({ tip_proiect }) => {
-    const [formData, setFormData] = useState({ name: "", phone: "", email: "", projectType: "", details: "", area: "", buget: "" })
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        email: "",
+        projectType: "",
+        details: "",
+        area: "",
+        buget: "",
+        gdprConsent: false
+    })
     const { setMessageData } = useNavProv()
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, type, checked } = e.target;
         setFormData((prevState) => ({
             ...prevState,
-            [name]: value
+            [name]: type === 'checkbox' ? checked : value
         }));
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(!formData.gdprConsent) {
+            setMessageData({ show: true, message: "Te rugăm să accepți Politica de Confidențialitate.", type: 'error' });
+            return;
+        }
         console.log('Form Submitted:', formData);
         sendEmail(formData).then((s) => {
             console.log(s);
             setMessageData({ show: true, message: "Mesajul a fost trimis! Vă vom contacta în maxim 24 de ore.", type: 'success' });
             setFormData({ name: "", phone: "", email: "", projectType: "", details: "", area: "", buget: "" })
-        }).catch((e) => { console.error(e); setMessageData({ show: true, message: "A apărut o eroare. Vă rugăm să încercați mai târziu sau să ne contactați telefonic sau printr-un mail.", type: 'error' });});
+        }).catch((e) => { console.error(e); setMessageData({ show: true, message: "A apărut o eroare. Vă rugăm să încercați mai târziu sau să ne contactați telefonic sau printr-un mail.", type: 'error' }); });
 
     };
     useEffect(() => { if (tip_proiect) setFormData((e) => ({ ...e, projectType: tip_proiect })) }, [tip_proiect]);
@@ -33,49 +47,24 @@ const ContactUnic = ({ tip_proiect }) => {
             <div className='contact-form-container' id="contact">
                 <h3>Solicită o ofertă</h3>
                 <form className='contact-form' onSubmit={handleSubmit}>
+                    {/* ... (restul câmpurilor rămân neschimbate) ... */}
                     <div className='form-row'>
                         <div className='form-group'>
                             <label>Nume Complet</label>
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Ion Popescu"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
+                            <input type="text" name="name" placeholder="Ion Popescu" value={formData.name} onChange={handleChange} required />
                         </div>
                         <div className='form-group'>
                             <label>Telefon</label>
-                            <input
-                                type="text"
-                                name="phone"
-                                placeholder="+40 700 000 000"
-                                value={formData.phone}
-                                onChange={handleChange}
-                                required
-                            />
+                            <input type="text" name="phone" placeholder="+40 700 000 000" value={formData.phone} onChange={handleChange} required />
                         </div>
                     </div>
                     <div className='form-group'>
                         <label>Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="email@exemplu.ro"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
+                        <input type="email" name="email" placeholder="email@exemplu.ro" value={formData.email} onChange={handleChange} required />
                     </div>
                     <div className='form-group'>
                         <label>Tip Proiect</label>
-                        <select
-                            name="projectType"
-                            value={formData.projectType}
-                            onChange={handleChange}
-                            required
-                        >
+                        <select name="projectType" value={formData.projectType} onChange={handleChange} required >
                             <option value="">Selectează tipul proiectului</option>
                             {tipuri_casa.map((v, i) => (
                                 <option key={i} value={v}>{v}</option>
@@ -85,14 +74,7 @@ const ContactUnic = ({ tip_proiect }) => {
                     <div className='form-row'>
                         <div className='form-group'>
                             <label>Suprafață estimată (mp)</label>
-                            <input
-                                type="number"
-                                name="area"
-                                placeholder="ex: 150"
-                                value={formData.area}
-                                onChange={handleChange}
-                                required
-                            />
+                            <input type="number" name="area" placeholder="ex: 150" value={formData.area} onChange={handleChange} required />
                         </div>
                         <div className='form-group'>
                             <label>Buget estimat (€)</label>
@@ -122,6 +104,23 @@ const ContactUnic = ({ tip_proiect }) => {
                             required
                         ></textarea>
                     </div>
+
+                    {/* 3. SECȚIUNEA GDPR ADĂUGATĂ */}
+                    <div className='form-group-checkbox' style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '20px' }}>
+                        <input
+                            type="checkbox"
+                            name="gdprConsent"
+                            id="gdprConsent"
+                            checked={formData.gdprConsent}
+                            onChange={handleChange}
+                            required
+                            style={{ width: 'auto', marginTop: '5px' }}
+                        />
+                        <label htmlFor="gdprConsent" style={{ fontSize: '14px', lineHeight: '1.4' }}>
+                            Sunt de acord cu prelucrarea datelor cu caracter personal conform <Link href="/politica-confidentialitate" target="_blank" style={{ textDecoration: 'underline', color: 'inherit' }}>Politicii de Confidențialitate</Link> și <Link href="/termeni-si-conditii" target="_blank" style={{ textDecoration: 'underline', color: 'inherit' }}>Termenilor și Condițiilor</Link>.
+                        </label>
+                    </div>
+
                     <button type="submit" className='btn-submit'>Trimite Mesajul</button>
                 </form>
                 <p className='form-note'>Răspundem în maxim 24 de ore lucrătoare</p>
