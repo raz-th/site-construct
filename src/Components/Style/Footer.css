@@ -1,5 +1,5 @@
 .footer {
-    background-color: #1a1e24; /* Fundal închis conform designului */
+    background-color: #1a1e24;
     color: #fff;
     padding: 5rem 4rem 2rem;
 }
@@ -34,7 +34,8 @@
     font-size: 1.2rem;
 }
 
-.footer-logo h3 {
+.footer-logo h3,
+.footer-brand h4 {
     font-size: 1.4rem;
     letter-spacing: 0.5px;
 }
@@ -43,7 +44,19 @@
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.6;
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Company Legal Details inside Footer */
+.company-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.company-details strong {
+    color: #fff;
 }
 
 /* Social Media */
@@ -97,6 +110,29 @@
     color: var(--accent-color);
 }
 
+/* ANPC / SOL Logos Section */
+.key_page_footer_column_anpc .key_page_footer_anpc {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+    align-items: center;
+}
+
+.key_page_footer_column_anpc .key_page_footer_anpc img {
+    height: 38px;
+    transition: opacity 0.2s ease;
+}
+
+.key_page_footer_column_anpc .key_page_footer_anpc img:hover {
+    opacity: 0.8;
+}
+
+.key_page_footer_anpc_text {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.5;
+}
+
 /* Bottom Bar */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -108,8 +144,28 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.85rem;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
 }
 
 /* Mobile Responsive */
@@ -129,7 +185,11 @@
     }
     .bottom-content {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         text-align: center;
+    }
+    .footer-social {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
